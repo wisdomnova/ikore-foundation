@@ -285,13 +285,14 @@
   }
   .team-card:hover { background: white; border-color: var(--sky); box-shadow: var(--shadow); transform: translateY(-4px); }
   .team-avatar {
-    width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 16px;
-    overflow: hidden; border: 3px solid white;
-    box-shadow: 0 4px 16px rgba(56,182,232,0.3);
-    background: var(--sky-light);
+    width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 16px;
+    overflow: hidden; background: var(--sky);
+    border: 3px solid white; box-shadow: 0 4px 16px rgba(56,182,232,0.3);
   }
-  .team-avatar img {
-    width: 100%; height: 100%; object-fit: cover; display: block;
+  .team-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .team-avatar.initials {
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: white;
   }
   .team-card h4 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; margin-bottom: 4px; }
   .team-card .role { font-size: 13px; color: var(--sky-dark); font-weight: 600; margin-bottom: 10px; }
@@ -931,13 +932,13 @@
         <div class="acc-body"><div class="acc-body-inner">
           <p>We deploy the Graduation Approach in conflict-affected areas to reintegrate smallholders into markets, targeting different segments of farmers with tailored support that allows them to cope, thrive, and step out of poverty.</p>
         </div></div>
-      </div>
+          </div>
       <div class="acc-item">
         <button class="acc-head" onclick="toggleAccordion(this)">
           <div class="acc-title">
             <div class="acc-num">2</div>
             <h3>Market Systems Facilitation</h3>
-          </div>
+        </div>
           <div class="acc-icon">+</div>
         </button>
         <div class="acc-body"><div class="acc-body-inner">
@@ -949,13 +950,13 @@
           <div class="acc-title">
             <div class="acc-num">3</div>
             <h3>Policy Advocacy</h3>
-          </div>
+    </div>
           <div class="acc-icon">+</div>
         </button>
         <div class="acc-body"><div class="acc-body-inner">
           <p>We facilitate evidence-based policy influencing, working with state and non-state actors to drive lasting reforms in the agrifood system.</p>
         </div></div>
-      </div>
+          </div>
       <div class="acc-item">
         <button class="acc-head" onclick="toggleAccordion(this)">
           <div class="acc-title">
@@ -967,20 +968,20 @@
         <div class="acc-body"><div class="acc-body-inner">
           <p>We design and implement context-specific empowerment programmes that remove barriers to women's participation in economic activities and markets, putting women at the centre of the design and execution.</p>
         </div></div>
-      </div>
+        </div>
       <div class="acc-item">
         <button class="acc-head" onclick="toggleAccordion(this)">
           <div class="acc-title">
             <div class="acc-num">5</div>
             <h3>Behaviour Change Communication</h3>
-          </div>
+      </div>
           <div class="acc-icon">+</div>
         </button>
         <div class="acc-body"><div class="acc-body-inner">
           <p>With our understanding of behavioural science, we design insight-led integrated communication campaigns that drive awareness and adoption of key agricultural inputs and services.</p>
         </div></div>
-      </div>
     </div>
+      </div>
   </section>
 
   <section style="background:var(--off-white);">
@@ -992,7 +993,7 @@
           <div class="acc-title">
             <div class="acc-num">01</div>
             <h3>PEACECORP II Project — Livestock</h3>
-          </div>
+    </div>
           <div class="acc-icon">+</div>
         </button>
         <div class="acc-body"><div class="acc-body-inner">
@@ -1004,7 +1005,7 @@
           <div class="acc-title">
             <div class="acc-num">02</div>
             <h3>Nutrition Advocacy</h3>
-          </div>
+    </div>
           <div class="acc-icon">+</div>
         </button>
         <div class="acc-body"><div class="acc-body-inner">
@@ -1052,14 +1053,18 @@
     <h2 class="section-title" style="margin-bottom:40px;">Our <span>Leadership Team</span></h2>
     <div class="team-grid">
       <div class="team-card">
-        <div class="team-avatar"><img src="team/ovo-ugbebor.png" alt="Ovo Ugbebor"></div>
+        <div class="team-avatar"><img src="team/ovo-ugbebor.jpg" alt="Ovo Ugbebor"></div>
         <h4>Ovo Ugbebor</h4>
         <div class="role">Chief Executive Officer</div>
       </div>
       <div class="team-card">
-        <div class="team-avatar"><img src="team/blessing-allen.png" alt="Blessing Allen Adebayo"></div>
-        <h4>Blessing Allen Adebayo</h4>
+        <div class="team-avatar"><img src="team/blessing-allen.png" alt="Blessing Allen"></div>
+        <h4>Blessing Allen</h4>
         <div class="role">Director, Programmes</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><img src="team/dr-david-shamaki.jpeg" alt="Dr. David Shamaki"></div>
+        <h4>Dr. David Shamaki</h4>
       </div>
       <div class="team-card">
         <div class="team-avatar"><img src="team/mr-godson.jpg" alt="Mr Godson"></div>
@@ -1070,8 +1075,34 @@
         <h4>Mrs. Nse</h4>
       </div>
       <div class="team-card">
-        <div class="team-avatar"><img src="team/dr-david-shamaki.jpeg" alt="Dr. David Shamaki"></div>
-        <h4>Dr. David Shamaki</h4>
+        <div class="team-avatar initials">GA</div>
+        <h4>Dr. Gbenga Ariyo</h4>
+        <div class="role">Assistant Director, Livestock</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar initials">NI</div>
+        <h4>Nkechi Ibekwe</h4>
+        <div class="role">Grants &amp; Finance Manager</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar initials">NO</div>
+        <h4>Nkemjika Onuoha</h4>
+        <div class="role">Head, Business Intelligence &amp; Impact</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar initials">RB</div>
+        <h4>Ruskiyat Badmus</h4>
+        <div class="role">Access to Finance Advisor</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar initials">EA</div>
+        <h4>Dr. Emmanuel Adegbe</h4>
+        <div class="role">Nutrition Advisor</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar initials">HA</div>
+        <h4>Dr. Hauwa Abubakar</h4>
+        <div class="role">Programme Officer</div>
       </div>
     </div>
 
