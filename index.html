@@ -285,10 +285,13 @@
   }
   .team-card:hover { background: white; border-color: var(--sky); box-shadow: var(--shadow); transform: translateY(-4px); }
   .team-avatar {
-    width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 16px;
-    background: var(--sky); display: flex; align-items: center; justify-content: center;
-    font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: white;
-    border: 3px solid white; box-shadow: 0 4px 16px rgba(56,182,232,0.3);
+    width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 16px;
+    overflow: hidden; border: 3px solid white;
+    box-shadow: 0 4px 16px rgba(56,182,232,0.3);
+    background: var(--sky-light);
+  }
+  .team-avatar img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
   }
   .team-card h4 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; margin-bottom: 4px; }
   .team-card .role { font-size: 13px; color: var(--sky-dark); font-weight: 600; margin-bottom: 10px; }
@@ -1049,44 +1052,26 @@
     <h2 class="section-title" style="margin-bottom:40px;">Our <span>Leadership Team</span></h2>
     <div class="team-grid">
       <div class="team-card">
-        <div class="team-avatar">OU</div>
+        <div class="team-avatar"><img src="team/ovo-ugbebor.png" alt="Ovo Ugbebor"></div>
         <h4>Ovo Ugbebor</h4>
         <div class="role">Chief Executive Officer</div>
       </div>
       <div class="team-card">
-        <div class="team-avatar">BA</div>
-        <h4>Blessing Allen</h4>
+        <div class="team-avatar"><img src="team/blessing-allen.png" alt="Blessing Allen Adebayo"></div>
+        <h4>Blessing Allen Adebayo</h4>
         <div class="role">Director, Programmes</div>
       </div>
       <div class="team-card">
-        <div class="team-avatar">GA</div>
-        <h4>Dr. Gbenga Ariyo</h4>
-        <div class="role">Assistant Director, Livestock</div>
+        <div class="team-avatar"><img src="team/mr-godson.jpg" alt="Mr Godson"></div>
+        <h4>Mr Godson</h4>
       </div>
       <div class="team-card">
-        <div class="team-avatar">NI</div>
-        <h4>Nkechi Ibekwe</h4>
-        <div class="role">Grants &amp; Finance Manager</div>
+        <div class="team-avatar"><img src="team/mrs-nse.jpeg" alt="Mrs. Nse"></div>
+        <h4>Mrs. Nse</h4>
       </div>
       <div class="team-card">
-        <div class="team-avatar">NO</div>
-        <h4>Nkemjika Onuoha</h4>
-        <div class="role">Head, Business Intelligence &amp; Impact</div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar">RB</div>
-        <h4>Ruskiyat Badmus</h4>
-        <div class="role">Access to Finance Advisor</div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar">EA</div>
-        <h4>Dr. Emmanuel Adegbe</h4>
-        <div class="role">Nutrition Advisor</div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar">HA</div>
-        <h4>Dr. Hauwa Abubakar</h4>
-        <div class="role">Programme Officer</div>
+        <div class="team-avatar"><img src="team/dr-david-shamaki.jpeg" alt="Dr. David Shamaki"></div>
+        <h4>Dr. David Shamaki</h4>
       </div>
     </div>
 
