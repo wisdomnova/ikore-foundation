@@ -519,7 +519,52 @@
     .acc-body-inner { padding: 0 22px 22px 22px; }
     .acc-head { padding: 18px 20px; }
   }
+
+  /* --- CUSTOM CAMPAIGN STYLES --- */
+  @keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+  }
+  .impact-card {
+    background: var(--off-white);
+    border: 2px solid var(--sky-mid);
+    border-radius: 16px;
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .impact-card:hover, .impact-card.active {
+    border-color: var(--sky);
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(56,182,232,0.15);
+  }
+  .impact-card.active {
+    background: var(--sky-light);
+  }
+  .breakdown-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  .breakdown-table th, .breakdown-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--sky-mid);
+  }
+  .breakdown-table th {
+    font-weight: 700;
+    color: var(--sky-dark);
+    background: var(--sky-light);
+  }
+  .breakdown-table tr:last-child td {
+    font-weight: 700;
+    border-bottom: 2px solid var(--sky);
+    font-size: 16px;
+  }
+
 </style>
+<script src="https://js.paystack.co/v1/inline.js"></script>
 </head>
 <body>
 
@@ -812,6 +857,26 @@
       <div class="partner-chip">🇳🇬 Federal Government of Nigeria</div>
       <div class="partner-chip">🤝 Tanager</div>
     </div>
+  </section>
+
+  <!-- WHY PARTNER WITH US -->
+  <section class="partner-why-section" style="background: var(--off-white); text-align: center; border-top: 1px solid var(--sky-mid); border-bottom: 1px solid var(--sky-mid); padding: 80px 10%;">
+    <div class="section-label">Why Partner with Us?</div>
+    <h2 class="section-title" style="margin-bottom: 20px;">Empowering Communities, <span>Transforming Lives</span></h2>
+    <p class="section-sub" style="max-width: 750px; margin: 0 auto 32px; line-height: 1.8; font-size: 17px; color: var(--text-light);">
+      We are empowering vulnerable women in rural communities with entrepreneurial skills with which they can generate income, reduce poverty and increase their impact in their families and communities.
+    </p>
+    <a href="#" class="btn-primary" onclick="showPage('donate')" style="background: var(--sky); color: white; box-shadow: 0 4px 15px rgba(56,182,232,0.3); font-size: 16px; padding: 14px 36px; border-radius: 30px;">Support Ongoing Fundraiser</a>
+  </section>
+
+  <!-- WHY PARTNER WITH US -->
+  <section class="partner-why-section" style="background: var(--off-white); text-align: center; border-top: 1px solid var(--sky-mid); border-bottom: 1px solid var(--sky-mid); padding: 80px 10%;">
+    <div class="section-label">Why Partner with Us?</div>
+    <h2 class="section-title" style="margin-bottom: 20px;">Empowering Communities, <span>Transforming Lives</span></h2>
+    <p class="section-sub" style="max-width: 750px; margin: 0 auto 32px; line-height: 1.8; font-size: 17px; color: var(--text-light);">
+      We are empowering vulnerable women in rural communities with entrepreneurial skills with which they can generate income, reduce poverty and increase their impact in their families and communities.
+    </p>
+    <a href="#" class="btn-primary" onclick="showPage('donate')" style="background: var(--sky); color: white; box-shadow: 0 4px 15px rgba(56,182,232,0.3); font-size: 16px; padding: 14px 36px; border-radius: 30px;">Support Ongoing Fundraiser</a>
   </section>
 
   <!-- GET INVOLVED -->
@@ -1255,80 +1320,187 @@
 
 <!-- ═══════════════ DONATE PAGE ═══════════════ -->
 <div id="page-donate" class="page">
-  <div style="background: linear-gradient(135deg, #e8a825, #f0c250); padding: 120px 10% 80px; color: white;">
-    <div class="section-label" style="color:rgba(255,255,255,0.8)">Give Today</div>
-    <h1 style="font-family:'Playfair Display',serif; font-size:clamp(32px,5vw,56px); font-weight:900; margin-bottom:20px;">Every Gift Plants a Seed</h1>
-    <p style="font-size:18px; opacity:.9; max-width:650px; line-height:1.7;">Your donation directly funds livestock, seeds, training, and opportunities for Nigeria's most vulnerable. No gift is too small to change a life.</p>
+  <div style="background: linear-gradient(135deg, #1a8fc0, #38b6e8); padding: 120px 10% 80px; color: white; text-align: center; position: relative;">
+    <div class="section-label" style="color:rgba(255,255,255,0.8)">Fundraising Campaign</div>
+    <h1 style="font-family:'Playfair Display',serif; font-size:clamp(32px,5vw,56px); font-weight:900; margin-bottom:20px;">Help a Woman Earn Again</h1>
+    <p style="font-size:19px; opacity:.95; max-width:800px; margin: 0 auto; line-height:1.75; font-weight: 300;">
+      Today, you have the opportunity to do something extraordinary. Not by giving temporary relief. But by helping a conflict-affected woman regain the ability to provide for herself and the people she loves. Your generosity equips women with the assets they need to rebuild sustainable livelihoods, earn an income, and create lasting economic security for their families.
+      <br><br>
+      <strong>This is more than a donation. It's an investment in resilience, dignity, and opportunity. Give today.</strong>
+    </p>
   </div>
-  <section>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start;">
+
+  <section style="background: var(--off-white);">
+    <div style="display:grid; grid-template-columns:1.2fr 1fr; gap:50px; align-items:start;">
+      
+      <!-- Left Column: Livelihood Campaign details & Tiers -->
       <div>
-        <h2 class="section-title">What Your Donation <span>Buys</span></h2>
-        <div style="display:grid; gap:16px; margin-top:30px;">
-          <div style="background:var(--sky-light); border-radius:14px; padding:20px 24px; display:flex; align-items:center; gap:16px; border-left:4px solid var(--sky);">
-            <div style="font-size:32px;">🐔</div>
-            <div><div style="font-weight:700; font-size:16px;">₦5,000 / $10</div><div style="color:var(--text-light); font-size:14px;">Provides a day-old chick and starter feed for one woman</div></div>
-          </div>
-          <div style="background:var(--sky-light); border-radius:14px; padding:20px 24px; display:flex; align-items:center; gap:16px; border-left:4px solid var(--sky);">
-            <div style="font-size:32px;">🐐</div>
-            <div><div style="font-weight:700; font-size:16px;">₦25,000 / $50</div><div style="color:var(--text-light); font-size:14px;">Funds a starter goat and 3 months of veterinary support</div></div>
-          </div>
-          <div style="background:var(--sky-light); border-radius:14px; padding:20px 24px; display:flex; align-items:center; gap:16px; border-left:4px solid var(--sky);">
-            <div style="font-size:32px;">🌱</div>
-            <div><div style="font-weight:700; font-size:16px;">₦50,000 / $100</div><div style="color:var(--text-light); font-size:14px;">Seeds, tools, and a full season of training for one farmer</div></div>
-          </div>
-          <div style="background:var(--sky-light); border-radius:14px; padding:20px 24px; display:flex; align-items:center; gap:16px; border-left:4px solid var(--gold); border-left-color:var(--gold);">
-            <div style="font-size:32px;">👨‍👩‍👧‍👦</div>
-            <div><div style="font-weight:700; font-size:16px;">₦250,000 / $500</div><div style="color:var(--text-light); font-size:14px;">Sponsors a complete household transformation package</div></div>
-          </div>
-          <div style="background:linear-gradient(135deg, var(--sky-dark), var(--sky)); border-radius:14px; padding:20px 24px; display:flex; align-items:center; gap:16px; color:white;">
-            <div style="font-size:32px;">🏘️</div>
-            <div><div style="font-weight:700; font-size:16px;">₦1,000,000+ / $2,000+</div><div style="font-size:14px; opacity:.85;">Fund an entire community programme for one quarter</div></div>
+        <!-- Countdown timer -->
+        <div class="countdown-container" style="background: #0e2235; border-radius: 20px; padding: 30px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); text-align: center; color: white; border: 2px solid var(--sky);">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 15px; color: var(--sky-mid);">Fundraising Campaign Countdown</h3>
+          <div class="countdown-timer" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <div style="background: rgba(255,255,255,0.1); padding: 12px 20px; border-radius: 12px; min-width: 80px;">
+              <span id="timer-days" style="display: block; font-size: 36px; font-weight: 800; color: var(--sky); font-family: 'Playfair Display', serif;">00</span>
+              <span style="font-size: 11px; text-transform: uppercase; color: var(--sky-light);">Days</span>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); padding: 12px 20px; border-radius: 12px; min-width: 80px;">
+              <span id="timer-hours" style="display: block; font-size: 36px; font-weight: 800; color: var(--sky); font-family: 'Playfair Display', serif;">00</span>
+              <span style="font-size: 11px; text-transform: uppercase; color: var(--sky-light);">Hours</span>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); padding: 12px 20px; border-radius: 12px; min-width: 80px;">
+              <span id="timer-minutes" style="display: block; font-size: 36px; font-weight: 800; color: var(--sky); font-family: 'Playfair Display', serif;">00</span>
+              <span style="font-size: 11px; text-transform: uppercase; color: var(--sky-light);">Minutes</span>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); padding: 12px 20px; border-radius: 12px; min-width: 80px;">
+              <span id="timer-seconds" style="display: block; font-size: 36px; font-weight: 800; color: var(--sky); font-family: 'Playfair Display', serif;">00</span>
+              <span style="font-size: 11px; text-transform: uppercase; color: var(--sky-light);">Seconds</span>
+            </div>
           </div>
         </div>
+
+        <div style="background: white; border-radius: 20px; padding: 36px; box-shadow: var(--shadow); margin-bottom: 40px;">
+          <h2 class="section-title" style="font-size: 28px; margin-bottom: 16px;">ABOUT THE <span>Ongoing FUNDRAISER</span></h2>
+          <p style="font-size: 15.5px; color: var(--text-light); line-height: 1.8; margin-bottom: 16px;">
+            Under the Market Recovery and Livelihood programme, the fundraiser aims to raise support to help conflict-affected women rebuild their lives through sustainable livestock enterprises. Many women in conflict-affected communities have lost their homes, livelihoods, and productive assets, leaving them with few opportunities to earn an income and provide for their families. Rather than offering short-term relief, this fundraiser invests in a long-term solution that equips women with the resources and skills to achieve economic independence.
+          </p>
+          <p style="font-size: 15.5px; color: var(--text-light); line-height: 1.8; margin-bottom: 16px;">
+            Through the Take and Give (TAG) model, every woman supported by the fundraiser receives a pair of goats (one male and one female), veterinary care, vaccines, feed, and practical training in livestock management and enterprise development. As the goats reproduce, the first female kid is passed on to another vulnerable woman, enabling her to start her own ruminant enterprise. At the same time, the original beneficiary retains the remaining offspring to grow her herd, increase her income, and strengthen her household's resilience.
+          </p>
+          <p style="font-size: 15.5px; color: var(--text-light); line-height: 1.8;">
+            This simple &quot;pass-it-on&quot; approach ensures that every donation creates lasting impact beyond a single beneficiary. As more women receive goats, more households gain sustainable sources of income, communities become more resilient, and a cycle of economic empowerment is created. Through productive assets, capacity building, and community-led asset transfer, the fundraiser helps conflict-affected women move from dependence to self-reliance while advancing the Sustainable Development Goals (SDGs), particularly SDG 1 (No Poverty) and SDG 5 (Gender Equality).
+          </p>
+        </div>
+
+        <div style="background: white; border-radius: 20px; padding: 36px; box-shadow: var(--shadow); margin-bottom: 40px;">
+          <h2 class="section-title" style="font-size: 28px; margin-bottom: 12px;">Your Impact <span>Starts Here</span></h2>
+          <p style="font-size: 16px; font-weight: 500; color: var(--text); margin-bottom: 20px;">
+            Every ₦150,000 equips one conflict-affected woman with everything she needs to establish a sustainable small-ruminant enterprise.
+          </p>
+          
+          <h3 style="font-family:'Playfair Display',serif; font-size: 20px; margin-bottom: 10px;">Your Contribution Provides</h3>
+          <table class="breakdown-table">
+            <thead>
+              <tr>
+                <th>Provision Component</th>
+                <th style="text-align: right;">Donation Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Two healthy six-month olds goats</td>
+                <td style="text-align: right; font-weight: 600;">₦90,000</td>
+              </tr>
+              <tr>
+                <td>Nutritious feed</td>
+                <td style="text-align: right; font-weight: 600;">₦28,000</td>
+              </tr>
+              <tr>
+                <td>Vaccines and veterinary care</td>
+                <td style="text-align: right; font-weight: 600;">₦20,000</td>
+              </tr>
+              <tr>
+                <td>A secure livestock pen</td>
+                <td style="text-align: right; font-weight: 600;">₦12,000</td>
+              </tr>
+              <tr>
+                <td>Total Investment</td>
+                <td style="text-align: right; font-weight: 700; color: var(--sky-dark);">₦150,000</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="font-size: 14.5px; color: var(--text-light); line-height: 1.6; margin-top: 15px;">
+            Every component plays a vital role. Together, they provide the foundation for a livelihood that can generate income, restore stability, and create lasting economic opportunity.
+          </p>
+        </div>
+
+        <h2 class="section-title" style="font-size: 28px; margin-bottom: 20px;">Choose <span>Your Impact</span></h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px;">
+          <div class="impact-card" onclick="selectImpact(15000)">
+            <div style="font-size: 28px; margin-bottom: 10px;">💊</div>
+            <div style="font-size: 22px; font-weight: 700; color: var(--sky-dark); margin-bottom: 6px;">₦15,000</div>
+            <p style="font-size: 14px; color: var(--text-light); line-height: 1.5;">Help provide feed and veterinary care.</p>
+          </div>
+          <div class="impact-card" onclick="selectImpact(30000)">
+            <div style="font-size: 28px; margin-bottom: 10px;">🐐</div>
+            <div style="font-size: 22px; font-weight: 700; color: var(--sky-dark); margin-bottom: 6px;">₦30,000</div>
+            <p style="font-size: 14px; color: var(--text-light); line-height: 1.5;">Strengthen a woman's livestock enterprise.</p>
+          </div>
+          <div class="impact-card" onclick="selectImpact(75000)">
+            <div style="font-size: 28px; margin-bottom: 10px;">🤝</div>
+            <div style="font-size: 22px; font-weight: 700; color: var(--sky-dark); margin-bottom: 6px;">₦75,000</div>
+            <p style="font-size: 14px; color: var(--text-light); line-height: 1.5;">Fund half of a complete livelihood package.</p>
+          </div>
+          <div class="impact-card" id="sponsorWomanCard" onclick="selectImpact(150000)">
+            <div style="font-size: 28px; margin-bottom: 10px;">👩‍🌾</div>
+            <div style="font-size: 22px; font-weight: 700; color: var(--gold); margin-bottom: 6px;">₦150,000</div>
+            <div style="font-weight: 700; font-size: 13px; text-transform: uppercase; color: var(--text); margin-bottom: 4px;">Sponsor One Conflict-Affected Woman</div>
+            <p style="font-size: 14px; color: var(--text-light); line-height: 1.5;">Equip one woman with everything she needs to rebuild.</p>
+          </div>
+        </div>
+        <p style="font-size: 15px; color: var(--text-light); font-style: italic; margin-bottom: 40px; text-align: center;">
+          Or give any amount. Every contribution moves another woman closer to economic independence.
+        </p>
       </div>
-      <div>
+
+      <!-- Right Column: Donation Form and Bank Details -->
+      <div style="position: sticky; top: 100px;">
         <div style="background:white; border-radius:24px; padding:40px; box-shadow:0 8px 40px rgba(56,182,232,0.15); border:2px solid var(--sky-mid);">
-          <h3 style="font-family:'Playfair Display',serif; font-size:24px; margin-bottom:24px;">Make a Donation</h3>
-          <div class="form-group"><label>Your Name</label><input type="text" placeholder="Full Name"/></div>
-          <div class="form-group"><label>Email Address</label><input type="email" placeholder="your@email.com"/></div>
-          <div class="form-group"><label>Donation Amount</label>
-            <select>
-              <option>₦5,000 — One Chick</option>
-              <option>₦25,000 — One Goat</option>
-              <option>₦50,000 — Full Farmer Package</option>
-              <option>₦250,000 — Household Transformation</option>
-              <option>₦1,000,000+ — Community Programme</option>
-              <option>Other amount</option>
-            </select>
-          </div>
-          <div class="form-group"><label>Dedication (Optional)</label><input type="text" placeholder="In honour of..."/></div>
+          <h3 style="font-family:'Playfair Display',serif; font-size:24px; margin-bottom:24px; color: var(--text);">Make a Donation</h3>
+          
           <div class="form-group">
-            <label>Payment Method</label>
-            <select>
-              <option>Bank Transfer</option>
-              <option>Card Payment</option>
-              <option>Paystack</option>
-              <option>Flutterwave</option>
-              <option>International Wire</option>
-            </select>
+            <label>Your Name</label>
+            <input type="text" id="donorName" placeholder="Full Name" required/>
           </div>
-          <button class="form-submit" style="background:var(--gold); color:white;">💛 Donate Now</button>
-          <p style="font-size:12px; color:var(--text-light); text-align:center; margin-top:16px;">The Ikore Foundation is a registered non-profit. All donations are used directly for programme delivery. You will receive a receipt for your records.</p>
+          
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="donorEmail" placeholder="your@email.com" required/>
+          </div>
+          
+          <div class="form-group">
+            <label>Donation Amount (₦)</label>
+            <input type="number" id="donorAmount" placeholder="Enter amount" min="500" required/>
+          </div>
+          
+          <div class="form-group">
+            <label>Dedication (Optional)</label>
+            <input type="text" id="donorDedication" placeholder="In honour of..."/>
+          </div>
+          
+          <button onclick="payWithPaystack()" class="form-submit" style="background:var(--gold); color:white; font-size:16px; margin-top:10px;">💛 Donate Now via Paystack</button>
+          
+          <p style="font-size:12px; color:var(--text-light); text-align:center; margin-top:16px; line-height:1.5;">
+            Ikore Empowerment Foundation is a registered non-profit. All donations directly fund livestock, training, and veterinary support. Secured by Paystack.
+          </p>
         </div>
-        <div style="margin-top:24px; background:var(--sky-dark); border-radius:16px; padding:24px; color:white;">
-          <div style="font-weight:700; margin-bottom:8px;">🏦 Bank Transfer Details</div>
-          <div style="font-size:14px; opacity:.85; line-height:1.8;">
-            Bank: First Bank of Nigeria<br>
-            Account Name: Ikore Empowerment Foundation<br>
-            Account Number: 0000000000<br>
-            Sort Code: 011151003
+
+        <div style="margin-top:24px; background:var(--sky-dark); border-radius:16px; padding:24px; color:white; box-shadow: var(--shadow);">
+          <div style="font-weight:700; margin-bottom:12px; font-size: 16px; display: flex; align-items: center; gap: 8px;">🏦 Direct Bank Transfer Details</div>
+          <div style="font-size:14.5px; opacity:.95; line-height:1.8;">
+            <strong style="color: var(--sky-light);">Account Name:</strong> Ikore Empowerment Foundation<br>
+            <strong style="color: var(--sky-light);">Bank:</strong> UBA Plc<br>
+            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 8px 0;">
+            <strong style="color: var(--sky-light);">NGN Account:</strong> 1026952676 (NGN)<br>
+            <strong style="color: var(--sky-light);">USD Account:</strong> 3004365012 (USD)
           </div>
         </div>
       </div>
+
     </div>
   </section>
 </div><!-- end donate -->
+
+<!-- SUCCESS MODAL -->
+<div id="successModal" style="display: none; position: fixed; inset: 0; background: rgba(26,43,60,0.85); backdrop-filter: blur(8px); z-index: 2000; align-items: center; justify-content: center; transition: opacity 0.3s ease; padding: 20px;">
+  <div style="background: white; width: 100%; max-width: 500px; padding: 40px; border-radius: 24px; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.3); border: 2px solid var(--sky);">
+    <div style="font-size: 70px; margin-bottom: 20px; animation: bounce 1s infinite alternate;">🎉</div>
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 16px; color: var(--sky-dark);">Thank You, Sponsor!</h3>
+    <p style="color: var(--text-light); font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
+      Your contribution has been successfully processed via Paystack. You have taken a huge step in helping a conflict-affected woman earn again and build a sustainable future.
+    </p>
+    <button onclick="closeSuccessModal()" class="btn-primary" style="background: var(--sky); color: white; width: 100%; border: none; padding: 14px; font-weight: 700; border-radius: 12px; cursor: pointer;">Close</button>
+  </div>
+</div>
 
 <!-- ═══════════════ FOOTER ═══════════════ -->
 <footer>
@@ -1426,6 +1598,116 @@
     const wasOpen = item.classList.contains('open');
     item.parentElement.querySelectorAll('.acc-item.open').forEach(el => el.classList.remove('open'));
     if (!wasOpen) item.classList.add('open');
+  }
+
+  // --- CAMPAIGN COUNTDOWN TIMER ---
+  // Set launch and campaign end date (e.g. counting down to Sept 30, 2026)
+  const targetCampaignDate = new Date("September 30, 2026 23:59:59").getTime();
+
+  function updateCampaignTimer() {
+    const now = new Date().getTime();
+    const difference = targetCampaignDate - now;
+
+    if (difference < 0) {
+      document.getElementById("timer-days").innerText = "00";
+      document.getElementById("timer-hours").innerText = "00";
+      document.getElementById("timer-minutes").innerText = "00";
+      document.getElementById("timer-seconds").innerText = "00";
+      return;
+    }
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+    document.getElementById("timer-days").innerText = String(days).padStart(2, '0');
+    document.getElementById("timer-hours").innerText = String(hours).padStart(2, '0');
+    document.getElementById("timer-minutes").innerText = String(minutes).padStart(2, '0');
+    document.getElementById("timer-seconds").innerText = String(seconds).padStart(2, '0');
+  }
+
+  setInterval(updateCampaignTimer, 1000);
+  updateCampaignTimer();
+
+  // --- IMPACT TIER SELECTION ---
+  function selectImpact(amount) {
+    // Update amount input
+    document.getElementById("donorAmount").value = amount;
+    
+    // Highlight selected card
+    document.querySelectorAll(".impact-card").forEach(card => {
+      card.classList.remove("active");
+      const cardText = card.querySelector("div:nth-child(2)").innerText;
+      const cardVal = parseInt(cardText.replace(/[^0-9]/g, ''));
+      if (cardVal === amount) {
+        card.classList.add("active");
+      }
+    });
+
+    // Scroll smoothly to form
+    document.getElementById("donorName").focus({preventScroll:false});
+    document.getElementById("paystackForm")?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // --- PAYSTACK INTEGRATION ---
+  function payWithPaystack() {
+    const name = document.getElementById("donorName").value.trim();
+    const email = document.getElementById("donorEmail").value.trim();
+    const amount = parseFloat(document.getElementById("donorAmount").value);
+    const dedication = document.getElementById("donorDedication").value.trim();
+
+    if (!name || !email || isNaN(amount) || amount < 500) {
+      alert("Please fill in your Name, Email and a valid donation amount (minimum ₦500).");
+      return;
+    }
+
+    // Paystack Pop setup
+    const handler = PaystackPop.setup({
+      key: 'pk_test_a25b169542ee4adcf25608c029a1b0292b3a88a0', // Test public key
+      email: email,
+      amount: amount * 100, // in kobo
+      currency: 'NGN',
+      metadata: {
+        custom_fields: [
+          {
+            display_name: "Donor Name",
+            variable_name: "donor_name",
+            value: name
+          },
+          {
+            display_name: "Dedication",
+            variable_name: "dedication",
+            value: dedication
+          }
+        ]
+      },
+      callback: function(response) {
+        // Success
+        document.getElementById("successModal").style.display = "flex";
+        document.getElementById("successModal").style.opacity = "1";
+        
+        // Reset form
+        document.getElementById("donorName").value = "";
+        document.getElementById("donorEmail").value = "";
+        document.getElementById("donorAmount").value = "";
+        document.getElementById("donorDedication").value = "";
+        document.querySelectorAll(".impact-card").forEach(c => c.classList.remove("active"));
+      },
+      onClose: function() {
+        alert("Transaction cancelled.");
+      }
+    });
+
+    handler.openIframe();
+  }
+
+  function closeSuccessModal() {
+    const modal = document.getElementById("successModal");
+    modal.style.opacity = "0";
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 300);
   }
 </script>
 </body>
