@@ -3055,9 +3055,17 @@
         return;
       }
 
-      // Paystack Pop setup
-      const handler = PaystackPop.setup({
-        key: 'pk_live_b7e3a86d7a15c1b82467fd526e50bd0021f7d0be', // Test public key
+      // Fetch key dynamically from Vercel Serverless Function
+      fetch('/api/paystack-key')
+        .then(res => {
+          if (!res.ok) throw new Error("Failed to fetch key");
+          return res.json();
+        })
+        .then(data => {
+          const paystackKey = data.publicKey || 'pk_test_a25b169542ee4adcf25608c029a1b0292b3a88a0'; // fallback to test key
+          
+          const handler = PaystackPop.setup({
+        key: paystackKey,
         email: email,
         amount: amount * 100, // in kobo
         currency: 'NGN',
@@ -3093,6 +3101,11 @@
       });
 
       handler.openIframe();
+        })
+        .catch(err => {
+          console.error(err);
+          alert("An error occurred initializing payment. Please try again later.");
+        });
     }
 
     function closeSuccessModal() {
