@@ -3062,45 +3062,45 @@
           return res.json();
         })
         .then(data => {
-          const paystackKey = data.publicKey || 'pk_test_a25b169542ee4adcf25608c029a1b0292b3a88a0'; // fallback to test key
-          
+          const paystackKey = data.publicKey; // fallback to test key
+
           const handler = PaystackPop.setup({
-        key: paystackKey,
-        email: email,
-        amount: amount * 100, // in kobo
-        currency: 'NGN',
-        metadata: {
-          custom_fields: [
-            {
-              display_name: "Donor Name",
-              variable_name: "donor_name",
-              value: name
+            key: paystackKey,
+            email: email,
+            amount: amount * 100, // in kobo
+            currency: 'NGN',
+            metadata: {
+              custom_fields: [
+                {
+                  display_name: "Donor Name",
+                  variable_name: "donor_name",
+                  value: name
+                },
+                {
+                  display_name: "Dedication",
+                  variable_name: "dedication",
+                  value: dedication
+                }
+              ]
             },
-            {
-              display_name: "Dedication",
-              variable_name: "dedication",
-              value: dedication
+            callback: function (response) {
+              // Success
+              document.getElementById("successModal").style.display = "flex";
+              document.getElementById("successModal").style.opacity = "1";
+
+              // Reset form
+              document.getElementById("donorName").value = "";
+              document.getElementById("donorEmail").value = "";
+              document.getElementById("donorAmount").value = "";
+              document.getElementById("donorDedication").value = "";
+              document.querySelectorAll(".impact-card").forEach(c => c.classList.remove("active"));
+            },
+            onClose: function () {
+              alert("Transaction cancelled.");
             }
-          ]
-        },
-        callback: function (response) {
-          // Success
-          document.getElementById("successModal").style.display = "flex";
-          document.getElementById("successModal").style.opacity = "1";
+          });
 
-          // Reset form
-          document.getElementById("donorName").value = "";
-          document.getElementById("donorEmail").value = "";
-          document.getElementById("donorAmount").value = "";
-          document.getElementById("donorDedication").value = "";
-          document.querySelectorAll(".impact-card").forEach(c => c.classList.remove("active"));
-        },
-        onClose: function () {
-          alert("Transaction cancelled.");
-        }
-      });
-
-      handler.openIframe();
+          handler.openIframe();
         })
         .catch(err => {
           console.error(err);
