@@ -421,16 +421,8 @@ export const Home: React.FC<HomeProps> = ({ showPage }) => {
         </p>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px', maxWidth: '1000px', margin: '0 auto' }}>
           {[
-            "Mastercard Foundation",
-            "European Union",
-            "GAIN (Global Alliance for Improved Nutrition)",
-            "GIZ",
-            "Mercy Corps",
-            "Feed the Future (USAID)",
-            "AU-IBAR",
-            "ILRI",
-            "Federal Government of Nigeria",
-            "Tanager"
+            "Ikore International Development Limited",
+            "ChananHill"
           ].map((partner, idx) => (
             <div key={idx} style={{ 
               background: '#f4f8f5', 

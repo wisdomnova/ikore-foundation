@@ -19,6 +19,31 @@ export const DonateGeneral: React.FC<DonateGeneralProps> = ({ onSuccess }) => {
     }
 
     setLoading(true);
+
+    const startPaystack = (key: string) => {
+      // @ts-ignore
+      const handler = window.PaystackPop.setup({
+        key: key,
+        email: formData.email,
+        amount: amountVal * 100, // in kobo
+        currency: 'NGN',
+        metadata: {
+          custom_fields: [
+            { display_name: "Donor Name", variable_name: "donor_name", value: formData.name },
+            { display_name: "Dedication", variable_name: "dedication", value: formData.dedication }
+          ]
+        },
+        callback: function() {
+          onSuccess();
+          setFormData({ name: '', email: '', amount: '', dedication: '' });
+        },
+        onClose: function() {
+          alert("Transaction cancelled.");
+        }
+      });
+      handler.openIframe();
+    };
+
     fetch('/api/paystack-key')
       .then(res => {
         if (!res.ok) throw new Error("Failed to fetch key");
@@ -26,34 +51,14 @@ export const DonateGeneral: React.FC<DonateGeneralProps> = ({ onSuccess }) => {
       })
       .then(data => {
         setLoading(false);
-        const paystackKey = data.publicKey || 'pk_test_a25b169542ee4adcf25608c029a1b0292b3a88a0';
-        
-        // @ts-ignore
-        const handler = window.PaystackPop.setup({
-          key: paystackKey,
-          email: formData.email,
-          amount: amountVal * 100, // in kobo
-          currency: 'NGN',
-          metadata: {
-            custom_fields: [
-              { display_name: "Donor Name", variable_name: "donor_name", value: formData.name },
-              { display_name: "Dedication", variable_name: "dedication", value: formData.dedication }
-            ]
-          },
-          callback: function() {
-            onSuccess();
-            setFormData({ name: '', email: '', amount: '', dedication: '' });
-          },
-          onClose: function() {
-            alert("Transaction cancelled.");
-          }
-        });
-        handler.openIframe();
+        const paystackKey = data.publicKey || import.meta.env.VITE_PAYSTACK_PUBLIC_KEY || 'pk_test_bd1c3c7adb569fe85162e52a1c37573109dea65f';
+        startPaystack(paystackKey);
       })
       .catch(err => {
+        console.warn("API key fetch failed, falling back to client environment variables:", err);
         setLoading(false);
-        console.error(err);
-        alert("An error occurred initializing payment. Please try again later.");
+        const paystackKey = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY || 'pk_test_bd1c3c7adb569fe85162e52a1c37573109dea65f';
+        startPaystack(paystackKey);
       });
   };
 

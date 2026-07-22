@@ -44,13 +44,13 @@ export const Team: React.FC = () => {
         </motion.div>
 
         {/* Board Members */}
-        <div style={{ marginBottom: '60px' }}>
+        <div style={{ marginBottom: '80px' }}>
           <motion.h3 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '24px', fontWeight: 800, marginBottom: '24px', color: 'var(--sky-dark)' }}
+            style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '24px', fontWeight: 800, marginBottom: '32px', color: 'var(--sky-dark)' }}
           >
             Board Members
           </motion.h3>
@@ -59,28 +59,23 @@ export const Team: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '24px' }}
+            style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '30px' }}
           >
-            <div style={{ background: '#f4f8f5', borderRadius: '12px', padding: '24px' }}>
-              <h4 style={{ fontSize: '18px', marginBottom: '6px', fontWeight: 700, color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Ogheneneovo Ugbebor</h4>
-              <p style={{ color: 'var(--text-light)', fontSize: '14px', margin: 0 }}>Board Member</p>
-            </div>
-            <div style={{ background: '#f4f8f5', borderRadius: '12px', padding: '24px' }}>
-              <h4 style={{ fontSize: '18px', marginBottom: '6px', fontWeight: 700, color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Godson Ohuruogu</h4>
-              <p style={{ color: 'var(--text-light)', fontSize: '14px', margin: 0 }}>Board Member</p>
-            </div>
-            <div style={{ background: '#f4f8f5', borderRadius: '12px', padding: '24px' }}>
-              <h4 style={{ fontSize: '18px', marginBottom: '6px', fontWeight: 700, color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Dr. Blessing Allen</h4>
-              <p style={{ color: 'var(--text-light)', fontSize: '14px', margin: 0 }}>Board Member</p>
-            </div>
-            <div style={{ background: '#f4f8f5', borderRadius: '12px', padding: '24px' }}>
-              <h4 style={{ fontSize: '18px', marginBottom: '6px', fontWeight: 700, color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Dr. David Shamaki</h4>
-              <p style={{ color: 'var(--text-light)', fontSize: '14px', margin: 0 }}>Board Member</p>
-            </div>
-            <div style={{ background: '#f4f8f5', borderRadius: '12px', padding: '24px' }}>
-              <h4 style={{ fontSize: '18px', marginBottom: '6px', fontWeight: 700, color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Nseobong Dennis</h4>
-              <p style={{ color: 'var(--text-light)', fontSize: '14px', margin: 0 }}>Board Member</p>
-            </div>
+            {[
+              { name: "Ogheneneovo Ugbebor", role: "Board Member" },
+              { name: "Godson Ohuruogu", role: "Board Member" },
+              { name: "Dr. Blessing Allen", role: "Board Member" },
+              { name: "Dr. David Shamaki", role: "Board Member" },
+              { name: "Nseobong Dennis", role: "Board Member" }
+            ].map((member, idx) => (
+              <div key={idx} style={{ background: '#f4f8f5', borderRadius: '16px', padding: '36px 24px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div style={{ width: '110px', height: '110px', borderRadius: '50%', background: '#e2ece5', marginBottom: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--sky)' }}>
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
+                <h4 style={{ fontSize: '18px', marginBottom: '6px', fontWeight: 700, color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>{member.name}</h4>
+                <p style={{ color: 'var(--text-light)', fontSize: '14px', margin: 0 }}>{member.role}</p>
+              </div>
+            ))}
           </motion.div>
         </div>
 
@@ -91,7 +86,7 @@ export const Team: React.FC = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '24px', fontWeight: 800, marginBottom: '24px', color: 'var(--sky-dark)' }}
+            style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '24px', fontWeight: 800, marginBottom: '32px', color: 'var(--sky-dark)' }}
           >
             Leadership Team
           </motion.h3>
@@ -100,36 +95,25 @@ export const Team: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '24px' }}
+            style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '30px' }}
           >
-            <div style={{ background: '#f4f8f5', borderRadius: '12px', padding: '24px' }}>
-              <h4 style={{ fontSize: '18px', marginBottom: '6px', fontWeight: 700, color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Nkemjika Onuoha</h4>
-              <p style={{ color: 'var(--text-light)', fontSize: '14px', margin: 0 }}>Chief Executive</p>
-            </div>
-            <div style={{ background: '#f4f8f5', borderRadius: '12px', padding: '24px' }}>
-              <h4 style={{ fontSize: '18px', marginBottom: '6px', fontWeight: 700, color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Dr. Gbenga Ariyo</h4>
-              <p style={{ color: 'var(--text-light)', fontSize: '14px', margin: 0 }}>Director, Livestock</p>
-            </div>
-            <div style={{ background: '#f4f8f5', borderRadius: '12px', padding: '24px' }}>
-              <h4 style={{ fontSize: '18px', marginBottom: '6px', fontWeight: 700, color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Dr. Blessing Allen</h4>
-              <p style={{ color: 'var(--text-light)', fontSize: '14px', margin: 0 }}>Director, Programmes</p>
-            </div>
-            <div style={{ background: '#f4f8f5', borderRadius: '12px', padding: '24px' }}>
-              <h4 style={{ fontSize: '18px', marginBottom: '6px', fontWeight: 700, color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Dr. Emmanuel Adegbe</h4>
-              <p style={{ color: 'var(--text-light)', fontSize: '14px', margin: 0 }}>Nutrition and MERL Advisor</p>
-            </div>
-            <div style={{ background: '#f4f8f5', borderRadius: '12px', padding: '24px' }}>
-              <h4 style={{ fontSize: '18px', marginBottom: '6px', fontWeight: 700, color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Esther Yila</h4>
-              <p style={{ color: 'var(--text-light)', fontSize: '14px', margin: 0 }}>Head, Business Development</p>
-            </div>
-            <div style={{ background: '#f4f8f5', borderRadius: '12px', padding: '24px' }}>
-              <h4 style={{ fontSize: '18px', marginBottom: '6px', fontWeight: 700, color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Nkechi Ibekwe</h4>
-              <p style={{ color: 'var(--text-light)', fontSize: '14px', margin: 0 }}>Grants and Finance Manager</p>
-            </div>
-            <div style={{ background: '#f4f8f5', borderRadius: '12px', padding: '24px' }}>
-              <h4 style={{ fontSize: '18px', marginBottom: '6px', fontWeight: 700, color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Hauwa Abubakar</h4>
-              <p style={{ color: 'var(--text-light)', fontSize: '14px', margin: 0 }}>Programme Officer</p>
-            </div>
+            {[
+              { name: "Nkemjika Onuoha", role: "Chief Executive" },
+              { name: "Dr. Gbenga Ariyo", role: "Director, Livestock" },
+              { name: "Dr. Blessing Allen", role: "Director, Programmes" },
+              { name: "Dr. Emmanuel Adegbe", role: "Nutrition and MERL Advisor" },
+              { name: "Esther Yila", role: "Head, Business Development" },
+              { name: "Nkechi Ibekwe", role: "Grants and Finance Manager" },
+              { name: "Hauwa Abubakar", role: "Programme Officer" }
+            ].map((member, idx) => (
+              <div key={idx} style={{ background: '#f4f8f5', borderRadius: '16px', padding: '36px 24px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div style={{ width: '110px', height: '110px', borderRadius: '50%', background: '#e2ece5', marginBottom: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--sky)' }}>
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
+                <h4 style={{ fontSize: '18px', marginBottom: '6px', fontWeight: 700, color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>{member.name}</h4>
+                <p style={{ color: 'var(--text-light)', fontSize: '14px', margin: 0 }}>{member.role}</p>
+              </div>
+            ))}
           </motion.div>
         </div>
       </section>

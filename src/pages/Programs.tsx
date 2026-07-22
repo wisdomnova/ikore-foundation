@@ -31,6 +31,80 @@ export const Programs: React.FC<ProgramsProps> = ({ showPage }) => {
         </motion.div>
       </div>
 
+      {/* Thematic Areas */}
+      <section style={{ background: '#fcfdfe', padding: '90px 10%' }}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          style={{ textAlign: 'center', marginBottom: '50px' }}
+        >
+          <div className="section-label" style={{ margin: '0 auto 16px', display: 'table' }}>Our Focus</div>
+          <h2 className="section-title" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '32px', fontWeight: 800 }}>
+            Thematic Areas
+          </h2>
+          <p className="section-sub" style={{ margin: '0 auto', maxWidth: '600px' }}>
+            Our interventions are strategically designed around five key pillars to achieve maximum, long-term impact.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="responsive-grid-3"
+          style={{ gap: '30px' }}
+        >
+          <div style={{ background: '#f4f8f5', padding: '36px 30px', borderRadius: '16px' }}>
+            <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '20px', fontWeight: 700, color: 'var(--sky-dark)', marginBottom: '16px' }}>
+              Sustainable Agriculture & Livestock
+            </h3>
+            <p style={{ fontSize: '14.5px', color: 'var(--text-light)', lineHeight: '1.7', margin: 0 }}>
+              Supporting smallholders with high-quality inputs, veterinary services, asset transfer models (like the TAG Initiative), and capacity building to increase productivity and resilience.
+            </p>
+          </div>
+
+          <div style={{ background: '#f4f8f5', padding: '36px 30px', borderRadius: '16px' }}>
+            <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '20px', fontWeight: 700, color: 'var(--sky-dark)', marginBottom: '16px' }}>
+              Women’s Economic Empowerment
+            </h3>
+            <p style={{ fontSize: '14.5px', color: 'var(--text-light)', lineHeight: '1.7', margin: 0 }}>
+              Bridging resources to rural women and widows, enabling them to build independent agricultural enterprises, access credit, and lead within their local value chains.
+            </p>
+          </div>
+
+          <div style={{ background: '#f4f8f5', padding: '36px 30px', borderRadius: '16px' }}>
+            <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '20px', fontWeight: 700, color: 'var(--sky-dark)', marginBottom: '16px' }}>
+              Youth & Capacity Development
+            </h3>
+            <p style={{ fontSize: '14.5px', color: 'var(--text-light)', lineHeight: '1.7', margin: 0 }}>
+              Equipping younger generations with training in digital agriculture, agribusiness skills, and entrepreneurship opportunities to generate local job pathways.
+            </p>
+          </div>
+
+          <div style={{ background: '#f4f8f5', padding: '36px 30px', borderRadius: '16px' }}>
+            <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '20px', fontWeight: 700, color: 'var(--sky-dark)', marginBottom: '16px' }}>
+              Climate Solutions & Environmental Resilience
+            </h3>
+            <p style={{ fontSize: '14.5px', color: 'var(--text-light)', lineHeight: '1.7', margin: 0 }}>
+              Promoting regenerative farming, soil conservation, gum arabic restoration (iCARM), and circular economy waste solutions (BIN2BANK) to combat land degradation.
+            </p>
+          </div>
+
+          <div style={{ background: '#f4f8f5', padding: '36px 30px', borderRadius: '16px' }}>
+            <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '20px', fontWeight: 700, color: 'var(--sky-dark)', marginBottom: '16px' }}>
+              Inclusive Development & Disability Inclusion
+            </h3>
+            <p style={{ fontSize: '14.5px', color: 'var(--text-light)', lineHeight: '1.7', margin: 0 }}>
+              Designing adaptive tools and targeting grants to ensure that persons living with disabilities are completely integrated into agricultural projects.
+            </p>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Projects */}
       <section style={{ background: 'white', padding: '90px 10%' }}>
         <motion.div
           initial={{ opacity: 0 }}
@@ -40,7 +114,7 @@ export const Programs: React.FC<ProgramsProps> = ({ showPage }) => {
         >
           <div className="section-label" style={{ margin: '0 auto 16px', display: 'table' }}>Active Portfolio</div>
           <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '50px', fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '32px', fontWeight: 800 }}>
-            Current Projects
+            Projects
           </h2>
         </motion.div>
 
@@ -88,7 +162,7 @@ export const Programs: React.FC<ProgramsProps> = ({ showPage }) => {
                   Women play a central role in the agricultural value chain, forming its backbone by making up 52% of the total population in the sector (FAO). They also are responsible for up to 50% of the farm labor in Sub-Saharan Africa. Mostly, women are seen within the sector as entrepreneurs, livestock owners and smallholder farmers within the sector. Women are however limited by lack of access to productive resources and are not opportune to take advantage of the opportunities available within the sector.
                 </p>
                 <p style={{ marginBottom: '24px' }}>
-                  ChananHill, in a bid to address these challenges, identifies communities and target farmers, particularly widows and internally displaced women who fall within the most vulnerable group in their community. The women are supported with small ruminant (Male and Female goat), medication, vaccine and feed. Upon reproduction, the woman will also introduce another woman who is interested and she will be given the one kid out of the number of kids birthed by the goat whilst the remaining kids becomes hers. This way women learn to help other women and together they build a strong community of financially stable women resilient to economic shocks.
+                  Ikore Foundation, in a bid to address these challenges, in collaboration with ChananHill as her grassroot implementation partner identifies communities and target farmers, particularly widows and internally displaced women who fall within the most vulnerable group in their community. The women are supported with small ruminant (Male and Female goat), medication, vaccine and feed. Upon reproduction, the woman will also introduce another woman who is interested and she will be given the one kid out of the number of kids birthed by the goat whilst the remaining kids becomes hers. This way women learn to help other women and together they build a strong community of financially stable women resilient to economic shocks.
                 </p>
                 <button 
                   onClick={() => showPage('donate-tag')} 
@@ -138,7 +212,7 @@ export const Programs: React.FC<ProgramsProps> = ({ showPage }) => {
             )}
           </div>
 
-          {/* Project 03: PEACECORP II */}
+          {/* Project 03: BIN2BANK */}
           <div style={{ background: '#f4f8f5', borderRadius: '16px', overflow: 'hidden' }}>
             <button 
               onClick={() => toggleAccordion(3)}
@@ -158,7 +232,7 @@ export const Programs: React.FC<ProgramsProps> = ({ showPage }) => {
               <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
                 <span style={{ fontSize: '20px', fontWeight: 800, color: 'var(--sky)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>03</span>
                 <h3 style={{ fontSize: '18px', fontWeight: 700, margin: 0, color: 'var(--sky-dark)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                  PEACECORP II - Gombe State Agricultural Value Chain
+                  BIN2BANK
                 </h3>
               </div>
               <span style={{ fontSize: '24px', fontWeight: 300, color: 'var(--sky)' }}>{activeAccordion === 3 ? '−' : '+'}</span>
@@ -166,78 +240,11 @@ export const Programs: React.FC<ProgramsProps> = ({ showPage }) => {
             
             {activeAccordion === 3 && (
               <div style={{ padding: '0 32px 32px', color: 'var(--text-light)', fontSize: '15px', lineHeight: '1.8' }}>
-                <p style={{ margin: 0 }}>
-                  PEACECORP II focused on building long-term food security and local economic stability in northeastern Nigeria. Through training, input supply, and direct market linkage, we helped over 3,500 grain and vegetable smallholder farmers increase crop yields by 45% and access off-taker markets, reducing post-harvest losses by over half.
+                <p style={{ marginBottom: '16px', margin: 0 }}>
+                  Bin2bank is an initiative facilitating the sustainable reduction of plastic waste at the community level using a decentralized approach. The project aims to reduce the indiscriminate disposal of plastic waste by creating social awareness and engaging individuals within the project community. Our focus is essentially on PET bottles due to their wide prevalence, ease of recycling, accessibility and reusing. Our primary targets are women and youths who are trained and mobilised to champion the initiative and cascade positive behavioural change around proper plastic waste management within their various communities. We collaborate closely with local businesses and households within communities providing technical support and resources to selected women and youths which would enable and encourage them to actively participate and take ownership of the project.
                 </p>
-              </div>
-            )}
-          </div>
-
-          {/* Project 04: Nutrition Advocacy */}
-          <div style={{ background: '#f4f8f5', borderRadius: '16px', overflow: 'hidden' }}>
-            <button 
-              onClick={() => toggleAccordion(4)}
-              style={{ 
-                width: '100%', 
-                background: 'transparent', 
-                border: 'none', 
-                padding: '24px 32px', 
-                display: 'flex', 
-                justifyContent: 'space-between', 
-                alignItems: 'center', 
-                cursor: 'pointer',
-                textAlign: 'left',
-                outline: 'none'
-              }}
-            >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-                <span style={{ fontSize: '20px', fontWeight: 800, color: 'var(--sky)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>04</span>
-                <h3 style={{ fontSize: '18px', fontWeight: 700, margin: 0, color: 'var(--sky-dark)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                  Nutrition Advocacy and Biofortified Foods Integration
-                </h3>
-              </div>
-              <span style={{ fontSize: '24px', fontWeight: 300, color: 'var(--sky)' }}>{activeAccordion === 4 ? '−' : '+'}</span>
-            </button>
-            
-            {activeAccordion === 4 && (
-              <div style={{ padding: '0 32px 32px', color: 'var(--text-light)', fontSize: '15px', lineHeight: '1.8' }}>
                 <p style={{ margin: 0 }}>
-                  We promote biofortified crops, including Vitamin A Cassava and Orange-Fleshed Sweet Potatoes (OFSP), to combat malnutrition (hidden hunger) in nursing mothers and school-aged children. The initiative integrates nutritional education, crop recipes, and farming kits to over 5,000 households.
-                </p>
-              </div>
-            )}
-          </div>
-
-          {/* Project 05: Urban Household Farming */}
-          <div style={{ background: '#f4f8f5', borderRadius: '16px', overflow: 'hidden' }}>
-            <button 
-              onClick={() => toggleAccordion(5)}
-              style={{ 
-                width: '100%', 
-                background: 'transparent', 
-                border: 'none', 
-                padding: '24px 32px', 
-                display: 'flex', 
-                justifyContent: 'space-between', 
-                alignItems: 'center', 
-                cursor: 'pointer',
-                textAlign: 'left',
-                outline: 'none'
-              }}
-            >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-                <span style={{ fontSize: '20px', fontWeight: 800, color: 'var(--sky)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>05</span>
-                <h3 style={{ fontSize: '18px', fontWeight: 700, margin: 0, color: 'var(--sky-dark)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                  Urban Household Farming and Poultry Sponsorship
-                </h3>
-              </div>
-              <span style={{ fontSize: '24px', fontWeight: 300, color: 'var(--sky)' }}>{activeAccordion === 5 ? '−' : '+'}</span>
-            </button>
-            
-            {activeAccordion === 5 && (
-              <div style={{ padding: '0 32px 32px', color: 'var(--text-light)', fontSize: '15px', lineHeight: '1.8' }}>
-                <p style={{ margin: 0 }}>
-                  Sponsoring urban micro-farming and poultry systems for vulnerable families living in semi-urban suburbs. By providing backyard cage systems, day-old chicks, and feed packages, families can generate household protein and secure an additional source of daily cash income.
+                  Plastic waste pose global environmental threats because it alters habitats and natural processes, reducing our ecosystems’ ability to adapt to climate change directly affecting millions of people’s livelihoods and social well-being. Plastic pollution currently contributes to 10% of globally generated waste and Nigeria ranks 9th in the global plastic pollution chart with beverage companies, households, restaurants, hotels, lounges and supermarkets as leading plastic users. Majorly, poorer countries are hit the most as they lack infrastructural and technological facilities, and social awareness needed to tackle the plastic waste pandemic. To this effect, our project is committed to revolutionizing and developing effective and efficient methods of disposing of PET bottles in our communities, creating employment opportunities that invariably reduce poverty, ensure a cleaner environment, educate communities about the environmental and health risk associated with indiscriminate plastic waste disposal, foster collaboration with stakeholders, encourage community ownership and behavioural change and promote active participation in waste management.At the core, we strive to build sustainable communities that tackle the endemic problem of plastic waste pollution.
                 </p>
               </div>
             )}
