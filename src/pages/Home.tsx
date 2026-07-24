@@ -96,7 +96,7 @@ export const Home: React.FC<HomeProps> = ({ showPage }) => {
             Ikore Empowerment Foundation
           </div>
           <h1 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, lineHeight: '1.1', maxWidth: '650px', marginBottom: '30px', fontFamily: "'Plus Jakarta Sans', sans-serif", color: 'white' }}>
-            Harvesting Hope Across Nigeria
+            Sowing Seeds of Change
           </h1>
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
             <a href="#" onClick={(e) => { e.preventDefault(); showPage('donate-general'); }} style={{ background: 'white', color: '#124e1b', textDecoration: 'none', padding: '14px 28px', borderRadius: '30px', fontWeight: 700, fontSize: '14px', display: 'inline-flex', alignItems: 'center', gap: '8px', border: 'none' }}>
