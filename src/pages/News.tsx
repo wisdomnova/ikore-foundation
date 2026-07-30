@@ -6,7 +6,7 @@ export const News: React.FC = () => {
     {
       date: 'July 10, 2026',
       tag: 'Livestock Development',
-      title: 'TAG Initiative Expands to Support 1,500 Additional Women in Gombe',
+      title: 'TAG Project to Expand Support to 1000 Conflict-Affected women',
       desc: 'The Take and Give Initiative has announced a major expansion phase. Through a coalition of private donors and state support, the livestock asset transfer model will scale up to reach more widows and displaced households.'
     },
     {
@@ -14,12 +14,6 @@ export const News: React.FC = () => {
       tag: 'Conservation',
       title: 'iCARM Restores 2,000 Hectares of Degraded Land in Akko LGA',
       desc: 'Our conservation champion framework has successfully established agroforestry networks, intercropping Moringa and Acacia to combat desertification and create secondary NTFP incomes for smallholders.'
-    },
-    {
-      date: 'May 14, 2026',
-      tag: 'Biofortification',
-      title: 'Vitamin A Cassava Breeding Kits Distributed to Over 5,000 Families',
-      desc: 'To tackle hidden hunger and micronutrient deficiencies, our agricultural extension team has wrapped up a three-week distribution tour across rural communities, providing biofortified stems and recipe training.'
     }
   ];
 

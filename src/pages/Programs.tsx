@@ -42,7 +42,7 @@ export const Programs: React.FC<ProgramsProps> = ({ showPage }) => {
         >
           <div className="section-label" style={{ margin: '0 auto 16px', display: 'table' }}>Our Focus</div>
           <h2 className="section-title" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '32px', fontWeight: 800 }}>
-            Thematic Areas
+            Our Thematic Areas
           </h2>
           <p className="section-sub" style={{ margin: '0 auto', maxWidth: '600px' }}>
             Our interventions are strategically designed around five key pillars to achieve maximum, long-term impact.
@@ -59,46 +59,46 @@ export const Programs: React.FC<ProgramsProps> = ({ showPage }) => {
         >
           <div style={{ background: '#f4f8f5', padding: '36px 30px', borderRadius: '16px' }}>
             <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '20px', fontWeight: 700, color: 'var(--sky-dark)', marginBottom: '16px' }}>
-              Sustainable Agriculture & Livestock
+              Community-Led Development
             </h3>
             <p style={{ fontSize: '14.5px', color: 'var(--text-light)', lineHeight: '1.7', margin: 0 }}>
-              Supporting smallholders with high-quality inputs, veterinary services, asset transfer models (like the TAG Initiative), and capacity building to increase productivity and resilience.
+              Communities are at the heart of lasting change. We invest in locally led solutions by partnering with communities to build local capacity and deliver initiatives that reflect their priorities and aspirations.
             </p>
           </div>
 
           <div style={{ background: '#f4f8f5', padding: '36px 30px', borderRadius: '16px' }}>
             <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '20px', fontWeight: 700, color: 'var(--sky-dark)', marginBottom: '16px' }}>
-              Women’s Economic Empowerment
+              Women's Economic Empowerment and Justice
             </h3>
             <p style={{ fontSize: '14.5px', color: 'var(--text-light)', lineHeight: '1.7', margin: 0 }}>
-              Bridging resources to rural women and widows, enabling them to build independent agricultural enterprises, access credit, and lead within their local value chains.
+              Families prosper and communities become more resilient when women thrive. We invest in opportunities and solutions that expand women's economic participation, strengthen livelihoods, promote entrepreneurship, and advance equity.
             </p>
           </div>
 
           <div style={{ background: '#f4f8f5', padding: '36px 30px', borderRadius: '16px' }}>
             <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '20px', fontWeight: 700, color: 'var(--sky-dark)', marginBottom: '16px' }}>
-              Youth & Capacity Development
+              Health, Nutrition and Wellbeing
             </h3>
             <p style={{ fontSize: '14.5px', color: 'var(--text-light)', lineHeight: '1.7', margin: 0 }}>
-              Equipping younger generations with training in digital agriculture, agribusiness skills, and entrepreneurship opportunities to generate local job pathways.
+              Healthy people are the foundation of thriving communities. We support initiatives that improve access to quality healthcare, promote better nutrition, and encourage healthy practices that enable individuals and families to live productive lives.
             </p>
           </div>
 
           <div style={{ background: '#f4f8f5', padding: '36px 30px', borderRadius: '16px' }}>
             <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '20px', fontWeight: 700, color: 'var(--sky-dark)', marginBottom: '16px' }}>
-              Climate Solutions & Environmental Resilience
+              Water, Sanitation and Hygiene (WASH)
             </h3>
             <p style={{ fontSize: '14.5px', color: 'var(--text-light)', lineHeight: '1.7', margin: 0 }}>
-              Promoting regenerative farming, soil conservation, gum arabic restoration (iCARM), and circular economy waste solutions (BIN2BANK) to combat land degradation.
+              Access to safe water and sanitation transforms lives. We invest in community-driven WASH initiatives that improve access to clean water, sanitation, and hygiene, helping to reduce preventable diseases, improve public health, and create safer, healthier environments where people and communities can flourish.
             </p>
           </div>
 
           <div style={{ background: '#f4f8f5', padding: '36px 30px', borderRadius: '16px' }}>
             <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '20px', fontWeight: 700, color: 'var(--sky-dark)', marginBottom: '16px' }}>
-              Inclusive Development & Disability Inclusion
+              Sustainable Livelihoods and Market Recovery
             </h3>
             <p style={{ fontSize: '14.5px', color: 'var(--text-light)', lineHeight: '1.7', margin: 0 }}>
-              Designing adaptive tools and targeting grants to ensure that persons living with disabilities are completely integrated into agricultural projects.
+              Economic recovery begins with restored livelihoods. We support individuals and communities, particularly those affected by conflict, displacement, economic hardship, and environmental challenges to restore livelihoods, strengthen local economies, and expand access to skills, markets, finance, and enterprise opportunities. We help communities build lasting resilience and shared prosperity by creating pathways to economic recovery.
             </p>
           </div>
         </motion.div>

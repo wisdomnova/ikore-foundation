@@ -13,52 +13,24 @@ interface HomeProps {
 export const Home: React.FC<HomeProps> = ({ showPage }) => {
   const focusAreas = [
     {
-      title: "Small Ruminants",
-      desc: "Goat and sheep farming programmes providing beneficiaries with starter stock, veterinary support, and market linkages to build sustainable income."
+      title: "Community-Led Development",
+      desc: "Communities are at the heart of lasting change. We invest in locally led solutions by partnering with communities to build local capacity and deliver initiatives that reflect their priorities and aspirations."
     },
     {
-      title: "Poultry & Chicken",
-      desc: "Backyard and small-scale poultry farming training with inputs support, disease management, and access to feed, empowering women and youth entrepreneurs."
+      title: "Women's Economic Empowerment and Justice",
+      desc: "Families prosper and communities become more resilient when women thrive. We invest in opportunities and solutions that expand women's economic participation, strengthen livelihoods, promote entrepreneurship, and advance equity."
     },
     {
-      title: "Livestock & Animal Health",
-      desc: "Comprehensive livestock support including vaccination campaigns, community animal health workers training, and disease surveillance across Northern Nigeria."
+      title: "Health, Nutrition and Wellbeing",
+      desc: "Healthy people are the foundation of thriving communities. We support initiatives that improve access to quality healthcare, promote better nutrition, and encourage healthy practices that enable individuals and families to live productive lives."
     },
     {
-      title: "Crop Farming & Seeds",
-      desc: "Distribution of improved, biofortified seed varieties - rice, maize, cassava, vegetables - alongside good agronomic practices training for smallholder farmers."
+      title: "Water, Sanitation and Hygiene (WASH)",
+      desc: "Access to safe water and sanitation transforms lives. We invest in community-driven WASH initiatives that improve access to clean water, sanitation, and hygiene, helping to reduce preventable diseases, improve public health, and create safer, healthier environments where people and communities can flourish."
     },
     {
-      title: "Climate Change & Resilience",
-      desc: "Climate-smart agriculture practices, drought-resistant varieties, water harvesting, and adaptation strategies to protect livelihoods from climate shocks."
-    },
-    {
-      title: "Education & Capacity Building",
-      desc: "Literacy, vocational skills, and agricultural extension training programmes for women, youth, and persons with disabilities to unlock their full potential."
-    },
-    {
-      title: "Nutrition & Food Security",
-      desc: "Biofortification, kitchen gardens, and nutrition education to combat micronutrient deficiency, particularly for women of reproductive age and young children."
-    },
-    {
-      title: "Financial Inclusion",
-      desc: "Linking beneficiaries to cooperative savings, credit facilities, and grants so they can invest in and grow their agricultural enterprises independently."
-    },
-    {
-      title: "Agroforestry & Environment",
-      desc: "Tree planting, nature-based solutions, and sustainable land management to restore degraded environments while improving farm productivity."
-    },
-    {
-      title: "Digital Agriculture",
-      desc: "Digital tools, e-extension services, and mobile-based reporting systems to connect farmers with knowledge, markets, and support services."
-    },
-    {
-      title: "Post-Harvest & Value Addition",
-      desc: "Processing, storage, and packaging support to reduce post-harvest losses and help producers capture more value from their crops and livestock."
-    },
-    {
-      title: "Disability-Inclusive Agriculture",
-      desc: "Adaptive farming tools, accessible training methods, and targeted grants ensuring persons living with disabilities are fully included in all programmes."
+      title: "Sustainable Livelihoods and Market Recovery",
+      desc: "Economic recovery begins with restored livelihoods. We support individuals and communities, particularly those affected by conflict, displacement, economic hardship, and environmental challenges to restore livelihoods, strengthen local economies, and expand access to skills, markets, finance, and enterprise opportunities. We help communities build lasting resilience and shared prosperity by creating pathways to economic recovery."
     }
   ];
 
@@ -80,9 +52,10 @@ export const Home: React.FC<HomeProps> = ({ showPage }) => {
           transition={{ duration: 0.6 }}
           style={{
             position: 'relative',
-            height: '520px',
+            height: 'auto',
+            minHeight: '520px',
             borderRadius: '24px',
-            background: `linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%), url(${heroBg}) no-repeat center/cover`,
+            background: `linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 100%), url(${heroBg}) no-repeat center/cover`,
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -95,9 +68,15 @@ export const Home: React.FC<HomeProps> = ({ showPage }) => {
           <div style={{ display: 'inline-flex', alignItems: 'center', background: 'rgba(255, 255, 255, 0.2)', color: 'white', fontSize: '13px', fontWeight: 600, padding: '6px 16px', borderRadius: '20px', marginBottom: '20px', width: 'fit-content' }}>
             Ikore Empowerment Foundation
           </div>
-          <h1 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, lineHeight: '1.1', maxWidth: '650px', marginBottom: '30px', fontFamily: "'Plus Jakarta Sans', sans-serif", color: 'white' }}>
+          <h1 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 850, lineHeight: '1.1', maxWidth: '650px', marginBottom: '12px', fontFamily: "'Plus Jakarta Sans', sans-serif", color: 'white' }}>
             Sowing Seeds of Change
           </h1>
+          <h2 style={{ fontSize: 'clamp(20px, 3vw, 28px)', fontWeight: 700, marginBottom: '20px', fontFamily: "'Plus Jakarta Sans', sans-serif", color: 'var(--gold)' }}>
+            Creating Pathways to Self-Sufficiency
+          </h2>
+          <p style={{ fontSize: '16px', lineHeight: '1.6', maxWidth: '650px', marginBottom: '32px', color: 'rgba(255,255,255,0.9)', fontWeight: 500 }}>
+            Working alongside marginalized and conflict-affected communities to deploy human-centric, sustainable solutions, strengthen resilience, and create opportunities for economic independence.
+          </p>
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
             <a href="#" onClick={(e) => { e.preventDefault(); showPage('donate-general'); }} style={{ background: 'white', color: '#124e1b', textDecoration: 'none', padding: '14px 28px', borderRadius: '30px', fontWeight: 700, fontSize: '14px', display: 'inline-flex', alignItems: 'center', gap: '8px', border: 'none' }}>
               Make a Difference <span style={{ fontSize: '14px' }}>→</span>
@@ -121,7 +100,7 @@ export const Home: React.FC<HomeProps> = ({ showPage }) => {
         >
           <div>
             <p style={{ color: 'var(--text-light)', fontSize: '16.5px', lineHeight: '1.8', margin: 0 }}>
-              Empowering women, youth, and persons living with disabilities through sustainable agriculture, education, and climate-resilient livelihoods across Nigeria.
+              Building resilient communities through community-led solutions, strategic partnerships, and opportunities that enable people to shape their own future.
             </p>
           </div>
 
@@ -179,24 +158,24 @@ export const Home: React.FC<HomeProps> = ({ showPage }) => {
         </div>
         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
           <div style={{ background: 'white', padding: '10px 20px', borderRadius: '30px', fontWeight: 700, fontSize: '13px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-            Harvest
+            Empathy
+          </div>
+          <div style={{ background: 'white', padding: '10px 20px', borderRadius: '30px', fontWeight: 700, fontSize: '13px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            Co-creation
           </div>
           <div style={{ background: 'white', padding: '10px 20px', borderRadius: '30px', fontWeight: 700, fontSize: '13px', display: 'flex', alignItems: 'center', gap: '8px' }}>
             Inclusion
           </div>
           <div style={{ background: 'white', padding: '10px 20px', borderRadius: '30px', fontWeight: 700, fontSize: '13px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-            Resilience
-          </div>
-          <div style={{ background: 'white', padding: '10px 20px', borderRadius: '30px', fontWeight: 700, fontSize: '13px', display: 'flex', alignItems: 'center', gap: '8px' }}>
             Innovation
           </div>
           <div style={{ background: 'white', padding: '10px 20px', borderRadius: '30px', fontWeight: 700, fontSize: '13px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-            Compassion
+            Accountability
           </div>
         </div>
       </motion.div>
 
-      {/* HORIZONTAL SCROLL FOCUS AREAS */}
+      {/* HORIZONTAL SCROLL THEMATIC AREAS */}
       <motion.section 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -205,8 +184,10 @@ export const Home: React.FC<HomeProps> = ({ showPage }) => {
         style={{ background: 'white', padding: '80px 5%' }}
       >
         <div className="section-label">What We Do</div>
-        <h2 className="section-title">Our Areas of Focus</h2>
-        <p className="section-sub">From livestock to climate resilience, we address the root causes of vulnerability with practical, evidence-based solutions.</p>
+        <h2 className="section-title">Our Thematic Areas</h2>
+        <p className="section-sub">
+          We mobilize resources, forge strategic partnerships, and support community-led initiatives that strengthen resilience, expand opportunity, and enable marginalized and conflict-affected communities to build sustainable futures.
+        </p>
         
         {/* Horizontal Carousel Scroller */}
         <div className="focus-scroll-container" style={{ 
@@ -222,14 +203,14 @@ export const Home: React.FC<HomeProps> = ({ showPage }) => {
               background: '#f4f8f5', 
               borderRadius: '20px', 
               padding: '36px', 
-              width: '340px', 
+              width: '360px', 
               flex: '0 0 auto', 
               display: 'flex', 
               flexDirection: 'column', 
-              minHeight: '250px'
+              minHeight: '270px'
             }}>
               <h3 style={{ 
-                fontSize: '20px', 
+                fontSize: '19px', 
                 fontWeight: 700, 
                 color: '#124e1b', 
                 marginBottom: '16px', 
@@ -260,32 +241,23 @@ export const Home: React.FC<HomeProps> = ({ showPage }) => {
       >
         <div className="section-label">Our Impact</div>
         <h2 className="section-title">Transforming Lives at Scale</h2>
-        <p className="section-sub">Through the parent organization Ikore International and the Foundation, our reach continues to grow every year.</p>
+        <p className="section-sub">A summary of the verified metrics achieved across Gombe, Abuja, and other regional states.</p>
         
-        <div className="impact-grid responsive-grid-3" style={{ gap: '30px' }}>
-          <div className="impact-card">
-            <div className="big-num">10K+</div>
-            <div className="impact-label">Farmers directly reached in Northern Nigeria</div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', maxWidth: '1000px', margin: '0 auto' }} className="responsive-grid-3">
+          <div className="impact-card" style={{ background: '#f4f8f5', borderRadius: '16px', padding: '40px 24px', textAlign: 'center', boxShadow: 'none', border: 'none' }}>
+            <div className="big-num" style={{ fontSize: '48px', fontWeight: 800, color: 'var(--sky)', fontFamily: "'Plus Jakarta Sans', sans-serif", marginBottom: '8px' }}>242</div>
+            <div className="impact-label" style={{ fontWeight: 800, fontSize: '15px', color: 'var(--text)', marginBottom: '8px' }}>Numbers of Women Helped</div>
+            <p style={{ color: 'var(--text-light)', fontSize: '13px', margin: 0 }}>We've helped 242 women across Nigeria.</p>
           </div>
-          <div className="impact-card">
-            <div className="big-num">36</div>
-            <div className="impact-label">Nigerian states covered by foundation programmes</div>
+          <div className="impact-card" style={{ background: '#f4f8f5', borderRadius: '16px', padding: '40px 24px', textAlign: 'center', boxShadow: 'none', border: 'none' }}>
+            <div className="big-num" style={{ fontSize: '48px', fontWeight: 800, color: 'var(--sky)', fontFamily: "'Plus Jakarta Sans', sans-serif", marginBottom: '8px' }}>62</div>
+            <div className="impact-label" style={{ fontWeight: 800, fontSize: '15px', color: 'var(--text)', marginBottom: '8px' }}>Small Businesses Impacted</div>
+            <p style={{ color: 'var(--text-light)', fontSize: '13px', margin: 0 }}>We've been able to impact 62 businesses in the rural part of Nigeria.</p>
           </div>
-          <div className="impact-card">
-            <div className="big-num">600+</div>
-            <div className="impact-label">Livestock farmers supported with in-kind financing</div>
-          </div>
-          <div className="impact-card">
-            <div className="big-num">150%</div>
-            <div className="impact-label">Increase in farm productivity for beneficiaries</div>
-          </div>
-          <div className="impact-card">
-            <div className="big-num">60%</div>
-            <div className="impact-label">Improved crop yield through compost programmes</div>
-          </div>
-          <div className="impact-card">
-            <div className="big-num">500K</div>
-            <div className="impact-label">Target farmers per planting season by 2027</div>
+          <div className="impact-card" style={{ background: '#f4f8f5', borderRadius: '16px', padding: '40px 24px', textAlign: 'center', boxShadow: 'none', border: 'none' }}>
+            <div className="big-num" style={{ fontSize: '48px', fontWeight: 800, color: 'var(--sky)', fontFamily: "'Plus Jakarta Sans', sans-serif", marginBottom: '8px' }}>10</div>
+            <div className="impact-label" style={{ fontWeight: 800, fontSize: '15px', color: 'var(--text)', marginBottom: '8px' }}>States In Nigeria</div>
+            <p style={{ color: 'var(--text-light)', fontSize: '13px', margin: 0 }}>We've been able to go through 10 states in Nigeria including Gombe and Abuja.</p>
           </div>
         </div>
       </motion.section>
@@ -354,26 +326,26 @@ export const Home: React.FC<HomeProps> = ({ showPage }) => {
             <div className="program-img"><img src={images.base64Image13 || images.aboutStoryImage} alt="Poultry programme" /></div>
             <div className="program-body">
               <span className="program-tag">Livestock</span>
-              <h3>PEACECORP II Project - Livestock</h3>
-              <p>Field implementer on behalf of Ikore International.</p>
+              <h3>TAG Initiative - Take and Give Initiative</h3>
+              <p>Rebuilding livelihoods for conflict-affected women through small ruminant asset transfers.</p>
               <a href="#" className="program-link" onClick={(e) => { e.preventDefault(); showPage('programs'); }}>Learn more →</a>
             </div>
           </div>
           <div className="program-card">
-            <div className="program-img"><img src={images.base64Image14 || images.aboutStoryImage} alt="Small ruminants programme" /></div>
+            <div className="program-img"><img src={images.base64Image15 || images.aboutStoryImage} alt="BIN2BANK Project" /></div>
             <div className="program-body">
-              <span className="program-tag">Nutrition</span>
-              <h3>Nutrition Advocacy</h3>
-              <p>In collaboration with ChananHill, we drive nutrition advocacy at Primary Health Centres so women can lead in identifying affordable, balanced diets for their households.</p>
+              <span className="program-tag">Environment</span>
+              <h3>BIN2BANK</h3>
+              <p>Facilitating sustainable plastic waste reduction and circular opportunities at the community level.</p>
               <a href="#" className="program-link" onClick={(e) => { e.preventDefault(); showPage('programs'); }}>Learn more →</a>
             </div>
           </div>
           <div className="program-card">
-            <div className="program-img"><img src={images.base64Image15 || images.aboutStoryImage} alt="Urban Farming" /></div>
+            <div className="program-img"><img src={images.aboutStoryImage} alt="iCARM Project" /></div>
             <div className="program-body">
-              <span className="program-tag">Urban Farming</span>
-              <h3>Urban Household Farming & Biofortified Inputs</h3>
-              <p>Working with seed and fertiliser suppliers to break bulk for urban households and educate them on backyard farming with nutrient-dense crops like OFSP, maize, spinach and tomatoes.</p>
+              <span className="program-tag">Conservation</span>
+              <h3>iCARM Restoration Model</h3>
+              <p>Promoting regenerative agriculture and Non-Timber Forest Product value chains in Gombe.</p>
               <a href="#" className="program-link" onClick={(e) => { e.preventDefault(); showPage('programs'); }}>Learn more →</a>
             </div>
           </div>

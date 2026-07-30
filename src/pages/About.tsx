@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Users, Compass, Eye, ShieldCheck, HeartHandshake } from 'lucide-react';
+import { Award, Users, Compass, Eye, ShieldCheck, HeartHandshake, HelpCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { aboutStoryImage } from '../assets/images';
 
@@ -18,7 +18,7 @@ export const About: React.FC = () => {
             About Ikore Empowerment Foundation
           </h1>
           <p style={{ fontSize: '17px', color: 'var(--text-light)', maxWidth: '650px', lineHeight: 1.7, marginBottom: '32px' }}>
-            The not-for-profit arm of Ikore International, dedicated to empowering Nigeria's most vulnerable through sustainable agriculture and inclusive development.
+            We exist to connect empathy with action bringing together partners, communities, philanthropists, and changemakers to address society's most pressing challenges through human-centric, sustainable, solutions.
           </p>
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
             <a href="https://www.instagram.com/ikorefoundation?igsh=MWtkeWM3N2t2dDBhYg==" target="_blank" rel="noopener noreferrer" style={{ background: 'var(--sky)', color: 'white', border: 'none', padding: '12px 24px', borderRadius: '8px', fontWeight: 700, fontSize: '14px', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
@@ -45,13 +45,16 @@ export const About: React.FC = () => {
               Rooted in Impact
             </h2>
             <p style={{ fontSize: '15.5px', color: 'var(--text-light)', lineHeight: 1.8, marginBottom: '20px' }}>
-              Established as the non-profit division of Ikore International Development Limited, the Ikore Empowerment Foundation was created to bridge the gap between high-level development research and real-world implementation in Nigeria's most marginalized communities.
+              Established as the non-profit arm of Ikore International Development Limited, the Ikore Empowerment Foundation was created to advance charitable causes that create meaningful and lasting social impact. Born from years of experience designing and delivering development solutions across Nigeria, the Foundation was created to extend that impact beyond commercial pathways and provide a dedicated platform for philanthropy extending development solutions in Nigeria’s most marginalized and conflict-affected communities.
             </p>
             <p style={{ fontSize: '15.5px', color: 'var(--text-light)', lineHeight: 1.8, marginBottom: '20px' }}>
-              For years, we have worked on the ground across all 36 states, targeting our interventions at those who need them most: rural women, vulnerable youth, and persons living with disabilities. We believe that true development is not about hand-outs; it is about providing the tools, training, and productive assets that enable self-reliance and economic resilience.
+              Our journey has been shaped by the belief that sustainable development is achieved when communities are empowered to lead their own progress. Rather than delivering solutions to communities, we work with them, mobilizing resources, fostering strategic partnerships, and supporting locally driven initiatives that strengthen resilience, restore livelihoods, and expand opportunities.
             </p>
-            <p style={{ fontSize: '15.5px', color: 'var(--text-light)', lineHeight: 1.8, margin: 0 }}>
-              Our unique approach combines deep value chain expertise in agriculture and livestock with a passion for human dignity. By creating models like the Take and Give (TAG) Initiative, we ensure that every seed planted and every asset donated multiplies within the community, creating a chain reaction of prosperity.
+            <p style={{ fontSize: '15.5px', color: 'var(--text-light)', lineHeight: 1.8, marginBottom: '20px' }}>
+              Today, Ikore Foundation champions community-led development, women's economic empowerment and justice, health and wellbeing, water, sanitation and hygiene (WASH), and sustainable livelihoods and economic recovery. Across every initiative, we remain committed to creating pathways that enable marginalized and conflict-affected individuals and communities to reclaim agency, overcome systemic barriers, and build more resilient futures.
+            </p>
+            <p style={{ fontSize: '15.5px', color: 'var(--text-light)', lineHeight: 1.8, margin: 0, fontWeight: 600 }}>
+              At the heart of our work is a commitment to ensuring that communities lead their own development, supported by partnerships that expand opportunity and strengthen resilience.
             </p>
           </motion.div>
           
@@ -61,7 +64,7 @@ export const About: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <img src={aboutStoryImage} alt="Our Story" style={{ width: '100%', borderRadius: '20px', objectFit: 'cover', height: '440px' }} />
+            <img src={aboutStoryImage} alt="Our Story" style={{ width: '100%', borderRadius: '20px', objectFit: 'cover', height: '480px' }} />
           </motion.div>
         </div>
       </section>
@@ -82,7 +85,7 @@ export const About: React.FC = () => {
               <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '22px', fontWeight: 700, color: 'var(--sky-dark)' }}>Our Vision</h3>
             </div>
             <p style={{ fontSize: '15.5px', color: 'var(--text-light)', lineHeight: 1.8, margin: 0 }}>
-              A resilient, inclusive society where rural communities, women, youth, and marginalized groups have equal access to economic opportunities and resources, allowing them to lead self-sufficient lives.
+              We envision an equitable and peaceful society, where marginalized and conflict-affected people and communities overcome systemic barriers to reclaim agency, dignity and economic independence.
             </p>
           </div>
           <div style={{ background: '#f4f8f5', padding: '40px', borderRadius: '16px' }}>
@@ -91,7 +94,7 @@ export const About: React.FC = () => {
               <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '22px', fontWeight: 700, color: 'var(--sky-dark)' }}>Our Mission</h3>
             </div>
             <p style={{ fontSize: '15.5px', color: 'var(--text-light)', lineHeight: 1.8, margin: 0 }}>
-              To design and implement community-led, sustainable initiatives in agriculture, value chain integration, and capacity building that break the cycle of poverty and empower vulnerable groups across Nigeria.
+              To mobilize resources and forge strategic partnerships that deploy human-centric, sustainable solutions, empowering vulnerable communities to build resilience and achieve self-sufficiency.
             </p>
           </div>
         </motion.div>
@@ -109,21 +112,21 @@ export const About: React.FC = () => {
           </h2>
         </motion.div>
 
+        {/* 5 Core Values Grid */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="responsive-grid-4"
-          style={{ gap: '24px' }}
+          style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}
         >
           <div style={{ background: '#f4f8f5', padding: '36px 24px', borderRadius: '16px', textAlign: 'center' }}>
             <div style={{ background: 'white', width: '56px', height: '56px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px' }}>
-              <Award style={{ color: 'var(--sky)' }} />
+              <HeartHandshake style={{ color: 'var(--sky)' }} />
             </div>
-            <h4 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '10px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Integrity</h4>
+            <h4 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '10px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Empathy</h4>
             <p style={{ fontSize: '14px', color: 'var(--text-light)', lineHeight: 1.6, margin: 0 }}>
-              We hold ourselves to the highest standards of transparency, accountability, and ethical action.
+              We listen deeply to understand the lived experiences and challenges of the people and communities we serve, ensuring our work responds to actual needs.
             </p>
           </div>
 
@@ -131,9 +134,19 @@ export const About: React.FC = () => {
             <div style={{ background: 'white', width: '56px', height: '56px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px' }}>
               <Users style={{ color: 'var(--sky)' }} />
             </div>
-            <h4 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '10px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Inclusivity</h4>
+            <h4 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '10px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Co-creation</h4>
             <p style={{ fontSize: '14px', color: 'var(--text-light)', lineHeight: 1.6, margin: 0 }}>
-              We actively serve and include the most vulnerable, prioritizing women, youth, and persons with disabilities.
+              We believe the most sustainable solutions are created with communities, not for them. We work alongside communities and partners to deliver locally-owned and relevant solutions.
+            </p>
+          </div>
+
+          <div style={{ background: '#f4f8f5', padding: '36px 24px', borderRadius: '16px', textAlign: 'center' }}>
+            <div style={{ background: 'white', width: '56px', height: '56px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px' }}>
+              <Award style={{ color: 'var(--sky)' }} />
+            </div>
+            <h4 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '10px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Inclusion</h4>
+            <p style={{ fontSize: '14px', color: 'var(--text-light)', lineHeight: 1.6, margin: 0 }}>
+              We are committed to ensuring that women, youth, persons with disabilities, conflict-affected populations and underserved communities have equitable opportunities to participate and benefit from our initiatives.
             </p>
           </div>
 
@@ -141,19 +154,19 @@ export const About: React.FC = () => {
             <div style={{ background: 'white', width: '56px', height: '56px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px' }}>
               <ShieldCheck style={{ color: 'var(--sky)' }} />
             </div>
-            <h4 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '10px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Sustainability</h4>
+            <h4 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '10px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Innovation</h4>
             <p style={{ fontSize: '14px', color: 'var(--text-light)', lineHeight: 1.6, margin: 0 }}>
-              We construct our programmes to outlive our interventions, creating permanent livelihood shifts.
+              We champion the deployment and scaling of practical, proven solutions that address pressing social challenges and improve lives of disadvantaged groups.
             </p>
           </div>
 
           <div style={{ background: '#f4f8f5', padding: '36px 24px', borderRadius: '16px', textAlign: 'center' }}>
             <div style={{ background: 'white', width: '56px', height: '56px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px' }}>
-              <HeartHandshake style={{ color: 'var(--sky)' }} />
+              <HelpCircle style={{ color: 'var(--sky)' }} />
             </div>
-            <h4 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '10px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Empathy</h4>
+            <h4 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '10px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Accountability</h4>
             <p style={{ fontSize: '14px', color: 'var(--text-light)', lineHeight: 1.6, margin: 0 }}>
-              We treat every community partner with respect, valuing their voice and preserving their dignity.
+              We manage resources responsibly and remain transparent to the communities we serve, the partners we work with, and the donors who invest in our mission.
             </p>
           </div>
         </motion.div>
