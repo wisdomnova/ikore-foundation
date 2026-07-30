@@ -57,7 +57,7 @@ export const About: React.FC = () => {
               At the heart of our work is a commitment to ensuring that communities lead their own development, supported by partnerships that expand opportunity and strengthen resilience.
             </p>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -71,7 +71,7 @@ export const About: React.FC = () => {
 
       {/* Vision & Mission Values Strip */}
       <section style={{ background: '#fcfdfe', padding: '90px 10%' }}>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -99,7 +99,7 @@ export const About: React.FC = () => {
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -113,7 +113,7 @@ export const About: React.FC = () => {
         </motion.div>
 
         {/* 5 Core Values Grid */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

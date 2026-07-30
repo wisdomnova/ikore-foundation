@@ -68,12 +68,9 @@ export const Home: React.FC<HomeProps> = ({ showPage }) => {
           <div style={{ display: 'inline-flex', alignItems: 'center', background: 'rgba(255, 255, 255, 0.2)', color: 'white', fontSize: '13px', fontWeight: 600, padding: '6px 16px', borderRadius: '20px', marginBottom: '20px', width: 'fit-content' }}>
             Ikore Empowerment Foundation
           </div>
-          <h1 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 850, lineHeight: '1.1', maxWidth: '650px', marginBottom: '12px', fontFamily: "'Plus Jakarta Sans', sans-serif", color: 'white' }}>
+          <h1 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 850, lineHeight: '1.1', maxWidth: '650px', marginBottom: '30px', fontFamily: "'Plus Jakarta Sans', sans-serif", color: 'white' }}>
             Sowing Seeds of Change
           </h1>
-          <h2 style={{ fontSize: 'clamp(20px, 3vw, 28px)', fontWeight: 700, marginBottom: '20px', fontFamily: "'Plus Jakarta Sans', sans-serif", color: 'var(--gold)' }}>
-            Creating Pathways to Self-Sufficiency
-          </h2>
           <p style={{ fontSize: '16px', lineHeight: '1.6', maxWidth: '650px', marginBottom: '32px', color: 'rgba(255,255,255,0.9)', fontWeight: 500 }}>
             Working alongside marginalized and conflict-affected communities to deploy human-centric, sustainable solutions, strengthen resilience, and create opportunities for economic independence.
           </p>
