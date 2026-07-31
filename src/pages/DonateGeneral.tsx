@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Egg, Shield, Sprout, Users, Landmark } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+declare const process: any;
+
 interface DonateGeneralProps {
   onSuccess: () => void;
 }
@@ -44,24 +46,12 @@ export const DonateGeneral: React.FC<DonateGeneralProps> = ({ onSuccess }) => {
       handler.openIframe();
     };
 
-    fetch('/api/paystack-key')
-      .then(res => {
-        if (!res.ok) throw new Error("Failed to fetch payment gateway configuration");
-        return res.json();
-      })
-      .then(data => {
-        setLoading(false);
-        const paystackKey = data.publicKey;
-        if (!paystackKey) {
-          throw new Error("Payment gateway key is not configured on the server");
-        }
-        startPaystack(paystackKey);
-      })
-      .catch(err => {
-        setLoading(false);
-        console.error(err);
-        alert("An error occurred initializing payment: " + err.message);
-      });
+    const paystackKey = process.env.PAYSTACK_PUBLIC_KEY;
+    if (!paystackKey) {
+      alert("Payment gateway key is not configured. Please set PAYSTACK_PUBLIC_KEY in your environment variables.");
+      return;
+    }
+    startPaystack(paystackKey);
   };
 
   return (

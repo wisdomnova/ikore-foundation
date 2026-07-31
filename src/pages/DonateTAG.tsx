@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Activity, Shield, Landmark, Heart } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+declare const process: any;
+
 interface DonateTAGProps {
   onSuccess: () => void;
 }
@@ -81,24 +83,12 @@ export const DonateTAG: React.FC<DonateTAGProps> = ({ onSuccess }) => {
       handler.openIframe();
     };
 
-    fetch('/api/paystack-key')
-      .then(res => {
-        if (!res.ok) throw new Error("Failed to fetch payment gateway configuration");
-        return res.json();
-      })
-      .then(data => {
-        setLoading(false);
-        const paystackKey = data.publicKey;
-        if (!paystackKey) {
-          throw new Error("Payment gateway key is not configured on the server");
-        }
-        startPaystack(paystackKey);
-      })
-      .catch(err => {
-        setLoading(false);
-        console.error(err);
-        alert("An error occurred initializing payment: " + err.message);
-      });
+    const paystackKey = process.env.PAYSTACK_PUBLIC_KEY;
+    if (!paystackKey) {
+      alert("Payment gateway key is not configured. Please set PAYSTACK_PUBLIC_KEY in your environment variables.");
+      return;
+    }
+    startPaystack(paystackKey);
   };
 
   return (
