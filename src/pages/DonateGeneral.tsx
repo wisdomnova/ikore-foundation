@@ -95,7 +95,7 @@ export const DonateGeneral: React.FC<DonateGeneralProps> = ({ onSuccess }) => {
                   <Egg style={{ color: 'var(--sky)' }} />
                 </div>
                 <div>
-                  <div style={{ fontWeight: 700, fontSize: '16px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>5,000 / $10</div>
+                  <div style={{ fontWeight: 700, fontSize: '16px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>5,000 / $4</div>
                   <div style={{ color: 'var(--text-light)', fontSize: '14px' }}>Provides a day-old chick and starter feed for one woman</div>
                 </div>
               </div>
@@ -105,7 +105,7 @@ export const DonateGeneral: React.FC<DonateGeneralProps> = ({ onSuccess }) => {
                   <Shield style={{ color: 'var(--sky)' }} />
                 </div>
                 <div>
-                  <div style={{ fontWeight: 700, fontSize: '16px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>25,000 / $50</div>
+                  <div style={{ fontWeight: 700, fontSize: '16px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>55,000 / $40</div>
                   <div style={{ color: 'var(--text-light)', fontSize: '14px' }}>Funds a starter goat and 3 months of veterinary support</div>
                 </div>
               </div>
@@ -115,7 +115,7 @@ export const DonateGeneral: React.FC<DonateGeneralProps> = ({ onSuccess }) => {
                   <Sprout style={{ color: 'var(--sky)' }} />
                 </div>
                 <div>
-                  <div style={{ fontWeight: 700, fontSize: '16px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>50,000 / $100</div>
+                  <div style={{ fontWeight: 700, fontSize: '16px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>50,000 / $37</div>
                   <div style={{ color: 'var(--text-light)', fontSize: '14px' }}>Seeds, tools, and a full season of training for one farmer</div>
                 </div>
               </div>
@@ -125,7 +125,7 @@ export const DonateGeneral: React.FC<DonateGeneralProps> = ({ onSuccess }) => {
                   <Users style={{ color: 'var(--gold)' }} />
                 </div>
                 <div>
-                  <div style={{ fontWeight: 700, fontSize: '16px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>250,000 / $500</div>
+                  <div style={{ fontWeight: 700, fontSize: '16px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>250,000 / $180</div>
                   <div style={{ color: 'var(--text-light)', fontSize: '14px' }}>Sponsors a complete household transformation package</div>
                 </div>
               </div>
@@ -135,7 +135,7 @@ export const DonateGeneral: React.FC<DonateGeneralProps> = ({ onSuccess }) => {
                   <Landmark style={{ color: 'white' }} />
                 </div>
                 <div>
-                  <div style={{ fontWeight: 700, fontSize: '16px', color: 'white', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>1,000,000+ / $2,000+</div>
+                  <div style={{ fontWeight: 700, fontSize: '16px', color: 'white', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>1,000,000+ / $730+</div>
                   <div style={{ fontSize: '14px', opacity: 0.9 }}>Fund an entire community programme for one quarter</div>
                 </div>
               </div>

@@ -67,9 +67,8 @@ export const Contact: React.FC = () => {
                   <Phone size={24} />
                 </div>
                 <div>
-                  <h4 style={{ fontSize: '16px', fontWeight: 700, marginBottom: '4px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Phone Numbers</h4>
+                  <h4 style={{ fontSize: '16px', fontWeight: 700, marginBottom: '4px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Phone Number</h4>
                   <p style={{ fontSize: '14.5px', color: 'var(--text-light)', lineHeight: 1.5, margin: 0 }}>
-                    +234 (0)81 059 33298<br />
                     +234 (0)70 885 59767
                   </p>
                 </div>
@@ -82,8 +81,7 @@ export const Contact: React.FC = () => {
                 <div>
                   <h4 style={{ fontSize: '16px', fontWeight: 700, marginBottom: '4px', color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Email Address</h4>
                   <p style={{ fontSize: '14.5px', color: 'var(--text-light)', lineHeight: 1.5, margin: 0 }}>
-                    info@ikore.org<br />
-                    isreal.olatunde@ikore.org
+                    info@ikorefoundation.org
                   </p>
                 </div>
               </div>

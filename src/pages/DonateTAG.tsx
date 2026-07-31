@@ -169,7 +169,7 @@ export const DonateTAG: React.FC<DonateTAGProps> = ({ onSuccess }) => {
                 Your Impact Starts Here
               </h2>
               <p style={{ fontSize: '15.5px', color: 'var(--text-light)', lineHeight: 1.7, marginBottom: '24px' }}>
-                Every 150,000 equips one conflict-affected woman with everything she needs to establish a sustainable small-ruminant enterprise.
+                ₦200,000 equips one conflict-affected woman with everything she needs to establish a sustainable small-ruminant enterprise.
               </p>
               <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: '18px', fontWeight: 700, marginBottom: '16px', color: 'var(--text)' }}>
                 Your Contribution Provides
@@ -185,23 +185,23 @@ export const DonateTAG: React.FC<DonateTAGProps> = ({ onSuccess }) => {
                 <tbody>
                   <tr style={{ borderBottom: '1px solid #e2ece5' }}>
                     <td style={{ padding: '12px 8px', color: 'var(--text-light)' }}>Two healthy six-month olds goats</td>
-                    <td style={{ textAlign: 'right', padding: '12px 8px', fontWeight: 700, color: 'var(--text)' }}>90,000</td>
+                    <td style={{ textAlign: 'right', padding: '12px 8px', fontWeight: 700, color: 'var(--text)' }}>100,000</td>
                   </tr>
                   <tr style={{ borderBottom: '1px solid #e2ece5' }}>
-                    <td style={{ padding: '12px 8px', color: 'var(--text-light)' }}>Nutritious feed</td>
-                    <td style={{ textAlign: 'right', padding: '12px 8px', fontWeight: 700, color: 'var(--text)' }}>28,000</td>
+                    <td style={{ padding: '12px 8px', color: 'var(--text-light)' }}>Nutritious feed (for 6 months)</td>
+                    <td style={{ textAlign: 'right', padding: '12px 8px', fontWeight: 700, color: 'var(--text)' }}>50,000</td>
                   </tr>
                   <tr style={{ borderBottom: '1px solid #e2ece5' }}>
                     <td style={{ padding: '12px 8px', color: 'var(--text-light)' }}>Vaccines and veterinary care</td>
                     <td style={{ textAlign: 'right', padding: '12px 8px', fontWeight: 700, color: 'var(--text)' }}>20,000</td>
                   </tr>
                   <tr style={{ borderBottom: '1px solid #e2ece5' }}>
-                    <td style={{ padding: '12px 8px', color: 'var(--text-light)' }}>A secure livestock pen</td>
-                    <td style={{ textAlign: 'right', padding: '12px 8px', fontWeight: 700, color: 'var(--text)' }}>12,000</td>
+                    <td style={{ padding: '12px 8px', color: 'var(--text-light)' }}>Secured shelter for the goats</td>
+                    <td style={{ textAlign: 'right', padding: '12px 8px', fontWeight: 700, color: 'var(--text)' }}>30,000</td>
                   </tr>
                   <tr>
                     <td style={{ padding: '16px 8px', fontWeight: 800, color: 'var(--sky-dark)' }}>Total Investment</td>
-                    <td style={{ textAlign: 'right', padding: '16px 8px', fontWeight: 800, color: 'var(--sky)', fontSize: '16px' }}>150,000</td>
+                    <td style={{ textAlign: 'right', padding: '16px 8px', fontWeight: 800, color: 'var(--sky)', fontSize: '16px' }}>200,000</td>
                   </tr>
                 </tbody>
               </table>
@@ -217,76 +217,76 @@ export const DonateTAG: React.FC<DonateTAGProps> = ({ onSuccess }) => {
             </h2>
             <div className="responsive-grid-2" style={{ gap: '20px', marginBottom: '24px' }}>
               <div 
-                onClick={() => selectImpact(15000)} 
+                onClick={() => selectImpact(20000)} 
                 style={{ 
                   cursor: 'pointer', 
                   borderRadius: '16px', 
                   padding: '24px', 
-                  background: formData.amount === '15000' ? 'var(--sky)' : '#f4f8f5',
-                  color: formData.amount === '15000' ? 'white' : 'var(--text)',
+                  background: formData.amount === '20000' ? 'var(--sky)' : '#f4f8f5',
+                  color: formData.amount === '20000' ? 'white' : 'var(--text)',
                   transition: 'all 0.2s'
                 }}
               >
                 <div style={{ fontSize: '24px', marginBottom: '12px' }}>
-                  <Activity style={{ color: formData.amount === '15000' ? 'white' : 'var(--sky)' }} />
+                  <Activity style={{ color: formData.amount === '20000' ? 'white' : 'var(--sky)' }} />
                 </div>
-                <div style={{ fontSize: '22px', fontWeight: 800, marginBottom: '6px', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>15,000</div>
-                <p style={{ fontSize: '13.5px', opacity: 0.9, lineHeight: 1.5, margin: 0 }}>Help provide feed and veterinary care.</p>
+                <div style={{ fontSize: '22px', fontWeight: 800, marginBottom: '6px', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>₦ 20,000  ( $15)</div>
+                <p style={{ fontSize: '13.5px', opacity: 0.9, lineHeight: 1.5, margin: 0 }}>Covers essential vaccinations and veterinary care for a woman’s goat</p>
               </div>
 
               <div 
-                onClick={() => selectImpact(30000)} 
+                onClick={() => selectImpact(50000)} 
                 style={{ 
                   cursor: 'pointer', 
                   borderRadius: '16px', 
                   padding: '24px', 
-                  background: formData.amount === '30000' ? 'var(--sky)' : '#f4f8f5',
-                  color: formData.amount === '30000' ? 'white' : 'var(--text)',
+                  background: formData.amount === '50000' ? 'var(--sky)' : '#f4f8f5',
+                  color: formData.amount === '50000' ? 'white' : 'var(--text)',
                   transition: 'all 0.2s'
                 }}
               >
                 <div style={{ fontSize: '24px', marginBottom: '12px' }}>
-                  <Shield style={{ color: formData.amount === '30000' ? 'white' : 'var(--sky)' }} />
+                  <Shield style={{ color: formData.amount === '50000' ? 'white' : 'var(--sky)' }} />
                 </div>
-                <div style={{ fontSize: '22px', fontWeight: 800, marginBottom: '6px', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>30,000</div>
-                <p style={{ fontSize: '13.5px', opacity: 0.9, lineHeight: 1.5, margin: 0 }}>Strengthen a woman's livestock enterprise.</p>
+                <div style={{ fontSize: '22px', fontWeight: 800, marginBottom: '6px', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>₦ 50,000 ($37)</div>
+                <p style={{ fontSize: '13.5px', opacity: 0.9, lineHeight: 1.5, margin: 0 }}>Provides six months of nutritious feed</p>
               </div>
 
               <div 
-                onClick={() => selectImpact(75000)} 
+                onClick={() => selectImpact(100000)} 
                 style={{ 
                   cursor: 'pointer', 
                   borderRadius: '16px', 
                   padding: '24px', 
-                  background: formData.amount === '75000' ? 'var(--sky)' : '#f4f8f5',
-                  color: formData.amount === '75000' ? 'white' : 'var(--text)',
+                  background: formData.amount === '100000' ? 'var(--sky)' : '#f4f8f5',
+                  color: formData.amount === '100000' ? 'white' : 'var(--text)',
                   transition: 'all 0.2s'
                 }}
               >
                 <div style={{ fontSize: '24px', marginBottom: '12px' }}>
-                  <Landmark style={{ color: formData.amount === '75000' ? 'white' : 'var(--sky)' }} />
+                  <Landmark style={{ color: formData.amount === '100000' ? 'white' : 'var(--sky)' }} />
                 </div>
-                <div style={{ fontSize: '22px', fontWeight: 800, marginBottom: '6px', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>75,000</div>
-                <p style={{ fontSize: '13.5px', opacity: 0.9, lineHeight: 1.5, margin: 0 }}>Fund half of a complete livelihood package.</p>
+                <div style={{ fontSize: '22px', fontWeight: 800, marginBottom: '6px', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>₦ 100,000 ( $74)</div>
+                <p style={{ fontSize: '13.5px', opacity: 0.9, lineHeight: 1.5, margin: 0 }}>Provides two healthy six-month-old goats</p>
               </div>
 
               <div 
-                onClick={() => selectImpact(150000)} 
+                onClick={() => selectImpact(200000)} 
                 style={{ 
                   cursor: 'pointer', 
                   borderRadius: '16px', 
                   padding: '24px', 
-                  background: formData.amount === '150000' ? '#ffc83b' : '#f4f8f5',
-                  color: formData.amount === '150000' ? '#1c1503' : 'var(--text)',
+                  background: formData.amount === '200000' ? '#ffc83b' : '#f4f8f5',
+                  color: formData.amount === '200000' ? '#1c1503' : 'var(--text)',
                   transition: 'all 0.2s'
                 }}
               >
                 <div style={{ fontSize: '24px', marginBottom: '12px' }}>
-                  <Heart style={{ color: formData.amount === '150000' ? '#1c1503' : 'var(--sky)' }} />
+                  <Heart style={{ color: formData.amount === '200000' ? '#1c1503' : 'var(--sky)' }} />
                 </div>
-                <div style={{ fontSize: '22px', fontWeight: 800, marginBottom: '6px', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>150,000</div>
+                <div style={{ fontSize: '22px', fontWeight: 800, marginBottom: '6px', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>₦ 200,000 ( $148)</div>
                 <div style={{ fontWeight: 800, fontSize: '12px', textTransform: 'uppercase', marginBottom: '4px' }}>Sponsor One Conflict-Affected Woman</div>
-                <p style={{ fontSize: '13.5px', opacity: 0.9, lineHeight: 1.5, margin: 0 }}>Equip one woman with everything she needs to rebuild.</p>
+                <p style={{ fontSize: '13.5px', opacity: 0.9, lineHeight: 1.5, margin: 0 }}>Fully sponsors one woman with everything she needs to rebuild: two goats, feed, veterinary care and a secure shelter for the goats.</p>
               </div>
             </div>
 
