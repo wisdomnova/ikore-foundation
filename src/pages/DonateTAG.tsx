@@ -83,19 +83,21 @@ export const DonateTAG: React.FC<DonateTAGProps> = ({ onSuccess }) => {
 
     fetch('/api/paystack-key')
       .then(res => {
-        if (!res.ok) throw new Error("Failed to fetch key");
+        if (!res.ok) throw new Error("Failed to fetch payment gateway configuration");
         return res.json();
       })
       .then(data => {
         setLoading(false);
-        const paystackKey = data.publicKey || import.meta.env.VITE_PAYSTACK_PUBLIC_KEY || 'pk_test_bd1c3c7adb569fe85162e52a1c37573109dea65f';
+        const paystackKey = data.publicKey;
+        if (!paystackKey) {
+          throw new Error("Payment gateway key is not configured on the server");
+        }
         startPaystack(paystackKey);
       })
       .catch(err => {
-        console.warn("API key fetch failed, falling back to client environment variables:", err);
         setLoading(false);
-        const paystackKey = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY || 'pk_test_bd1c3c7adb569fe85162e52a1c37573109dea65f';
-        startPaystack(paystackKey);
+        console.error(err);
+        alert("An error occurred initializing payment: " + err.message);
       });
   };
 
