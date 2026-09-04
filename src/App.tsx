@@ -9,6 +9,7 @@ import { Programs } from './pages/Programs';
 import { Team } from './pages/Team';
 import { Gallery } from './pages/Gallery';
 import { News } from './pages/News';
+import { Careers } from './pages/Careers';
 import { Contact } from './pages/Contact';
 import { DonateGeneral } from './pages/DonateGeneral';
 import { DonateTAG } from './pages/DonateTAG';
@@ -27,6 +28,7 @@ const App: React.FC = () => {
       case '/team': return 'team';
       case '/gallery': return 'gallery';
       case '/news': return 'news';
+      case '/careers': return 'careers';
       case '/contact': return 'contact';
       case '/donate': return 'donate-general';
       case '/donate-tag': return 'donate-tag';
@@ -44,6 +46,7 @@ const App: React.FC = () => {
       'team': '/team',
       'gallery': '/gallery',
       'news': '/news',
+      'careers': '/careers',
       'contact': '/contact',
       'donate-general': '/donate',
       'donate-tag': '/donate-tag'
@@ -70,6 +73,7 @@ const App: React.FC = () => {
           <Route path="/team" element={<Team />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/news" element={<News />} />
+          <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/donate" element={<DonateGeneral onSuccess={() => setIsSuccessOpen(true)} />} />
           <Route path="/donate-tag" element={<DonateTAG onSuccess={() => setIsSuccessOpen(true)} />} />

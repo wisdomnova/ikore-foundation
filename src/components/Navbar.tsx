@@ -33,6 +33,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, showPage }) => {
         <a href="#" className={currentPage === 'team' ? 'active' : ''} onClick={() => { showPage('team'); setIsOpen(false); setShowDonateDropdown(false); }}>Our Team</a>
         <a href="#" className={currentPage === 'gallery' ? 'active' : ''} onClick={() => { showPage('gallery'); setIsOpen(false); setShowDonateDropdown(false); }}>Gallery</a>
         <a href="#" className={currentPage === 'news' ? 'active' : ''} onClick={() => { showPage('news'); setIsOpen(false); setShowDonateDropdown(false); }}>News</a>
+        <a href="#" className={currentPage === 'careers' ? 'active' : ''} onClick={() => { showPage('careers'); setIsOpen(false); setShowDonateDropdown(false); }}>Careers</a>
         <a href="#" className={currentPage === 'contact' ? 'active' : ''} onClick={() => { showPage('contact'); setIsOpen(false); setShowDonateDropdown(false); }}>Contact</a>
         
         <div className="dropdown" style={{ position: 'relative', display: 'inline-block', marginLeft: '8px' }}>

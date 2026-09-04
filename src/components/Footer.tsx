@@ -64,6 +64,7 @@ export const Footer: React.FC<FooterProps> = ({ showPage }) => {
             <li><a href="#" onClick={(e) => { e.preventDefault(); showPage('team'); }} style={{ color: 'inherit', textDecoration: 'none', fontSize: '14.5px' }}>Our Team</a></li>
             <li><a href="#" onClick={(e) => { e.preventDefault(); showPage('gallery'); }} style={{ color: 'inherit', textDecoration: 'none', fontSize: '14.5px' }}>Gallery</a></li>
             <li><a href="#" onClick={(e) => { e.preventDefault(); showPage('news'); }} style={{ color: 'inherit', textDecoration: 'none', fontSize: '14.5px' }}>News & Stories</a></li>
+            <li><a href="#" onClick={(e) => { e.preventDefault(); showPage('careers'); }} style={{ color: 'inherit', textDecoration: 'none', fontSize: '14.5px' }}>Careers</a></li>
             <li><a href="#" onClick={(e) => { e.preventDefault(); showPage('contact'); }} style={{ color: 'inherit', textDecoration: 'none', fontSize: '14.5px' }}>Contact</a></li>
           </ul>
         </div>
